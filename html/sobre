@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre nós</title>
+     <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <ul class="menu">
+
+                <li> 
+                    <button> <a href="login.html"> Login </a> </button>
+                </li>
+            
+                <li> 
+                    <button> <a href="sobre.html"> Sobre nós </a> </button>
+                    
+                    <ul class="submenu">
+                        <li class="submenu li"> <a href="sobre.html"> Quem somos? </a> </li>
+                        <li class="submenu li"> <a href="sobre.html"> Contato </a> </li>
+                    </ul>
+                </li>
+
+                <li>
+                   <button>  <a href="dashboard.html"> Menu </a>  </button> 
+                   <ul class="submenu">
+                        <li class="submenu li"> <a href="dashboard.html"> Perfil </a> </li>
+                        <li class="submenu li"> <a href="dashboard.html"> Mais visitados </a> </li>
+                    </ul>
+                </li>
+
+                <li>
+                   <button>  <a href="produtos.html"> Produtos </a>  </button> 
+                   <ul class="submenu">
+                        <li class="submenu li"> <a href="produtos.html"> Vegetais </a> </li>
+                        <li class="submenu li"> <a href="produtos.html"> Pães </a> </li>
+                    </ul>
+                </li>
+                
+                <li>
+                  <button>  <a href="index.html"> Sua lista </a>  </button>  
+                  <ul class="submenu">
+                        <li class="submenu li"> <a href="index.html"> Adicionar item </a> </li>
+                        <li class="submenu li"> <a href="index.html"> Histórico de listas </a> </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <button> <a href="contato.html"> Contato </a> </button>
+                </li>
+                
+            </ul>
+    </header>
+    <h1>Quem somos?</h1>
+    <h3> <em> Venha conhecer um pouco da nossa empresa </em></h3>
+    <p> A loja online foi desenvolvida com o intuito de facilitar seu processo de compras e chegar ao mercado pronto apenas para pegar o que já foi escolhido. <br> Somos uma empresa fundada por 3 irmãos que querem transformar o bairro. <br> Desde 2024 nos certificando do <strong>seu</strong> conforto. </p>
+    <h3> Fale com a gente! </h3>
+    <ul class="lista">
+        <li>Endereço: Rua dos 3 irmaos, Janga - Paulista</li>
+        <li>Email: 3irmaos@gmail.com </li>
+        <li>Telefone: (81)91234-5678 </li>
+    </ul>
+    
+    <footer class="rodape-grid">
+        <h3>Nos sigas nas redes</h3>
+        <p class="rodape-coluna"><a href="https://www.instagram.com/paisefilhosoficial/" target="_blank"> Instagram </a></p>
+        <p class="rodape-coluna">Contato: (81)90123-4567</p>
+        <p class="rodape-coluna">Endereço: Rua dos 3 irmaos, Janga - Paulista</p>
+    </footer>
+</body>
+</html>
