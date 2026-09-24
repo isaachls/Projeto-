@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+    <title>Produtos</title>
+</head>
+<body>
+    <header>
+        <ul class="menu">
+
+                <li> 
+                    <button> <a href="login.html"> Login </a> </button>
+                </li>
+            
+                <li> 
+                    <button> <a href="sobre.html"> Sobre nós </a> </button>
+                    
+                    <ul class="submenu">
+                        <li class="submenu li"> <a href="sobre.html"> Quem somos? </a> </li>
+                        <li class="submenu li"> <a href="sobre.html"> Contato </a> </li>
+                    </ul>
+                </li>
+
+                <li>
+                   <button>  <a href="dashboard.html"> Menu </a>  </button> 
+                   <ul class="submenu">
+                        <li class="submenu li"> <a href="dashboard.html"> Perfil </a> </li>
+                        <li class="submenu li"> <a href="dashboard.html"> Mais visitados </a> </li>
+                    </ul>
+                </li>
+
+                <li>
+                   <button>  <a href="produtos.html"> Produtos </a>  </button> 
+                   <ul class="submenu">
+                        <li class="submenu li"> <a href="produtos.html"> Vegetais </a> </li>
+                        <li class="submenu li"> <a href="produtos.html"> Pães </a> </li>
+                    </ul>
+                </li>
+                
+                <li>
+                  <button>  <a href="index.html"> Sua lista </a>  </button>  
+                  <ul class="submenu">
+                        <li class="submenu li"> <a href="index.html"> Adicionar item </a> </li>
+                        <li class="submenu li"> <a href="index.html"> Histórico de listas </a> </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <button> <a href="contato.html"> Contato </a> </button>
+                </li>
+                
+            </ul>
+    </header>
+    <h1>Catálogo</h1>
+    <ol>
+        <li>Pão 5x</li>
+        <li>Ovos 5x</li>
+        <li>Leite 3x</li>
+        <li>Frutas 2x</li>
+        <li>Verduras 1x</li>
+    </ol>
+    <footer class="rodape-grid">
+        <h3>Nos sigas nas redes</h3>
+        <p class="rodape-coluna"><a href="https://www.instagram.com/paisefilhosoficial/" target="_blank"> Instagram </a></p>
+        <p class="rodape-coluna">Contato: (81)90123-4567</p>
+        <p class="rodape-coluna">Endereço: Rua dos 3 irmaos, Janga - Paulista</p>
+    </footer>
+    
+</body>
+</html>
