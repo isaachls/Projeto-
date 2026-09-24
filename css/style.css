@@ -1,0 +1,166 @@
+html {
+    height: 100%;
+    font-size:large;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background-color: #FAF6EE;
+    color: #4A3B32; 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {   
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    padding: 20px 30px 0 0;
+}
+
+.pagina-topo{
+    margin: 0 auto;
+    position:relative;
+    align-items: center;
+    font-size:20px;
+    color:var(#4A3B32);
+    margin-bottom:8px;
+    padding:20px 500px 0 0;
+}
+
+.balao-contato{
+   background-color: #E8D2C0; 
+   border-radius: 8px;
+   margin: 10px;
+   padding: 10px; 
+   color: #4A3B32;
+}
+
+.container-contato{
+        width: 100%;
+    max-width: 350px;
+}
+
+button {
+    border-radius: 8px;
+    border: none;
+    padding: 8px 16px;
+    color: #FFFFFF; 
+    background-color: #8C5A3A; 
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+a {
+    color: inherit;          
+    text-decoration: none; 
+}
+
+.menu {
+    gap: 25px;
+}
+
+.menu li {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+    background-color: #F3E5D8; 
+    top: 100%;
+    left: 0;
+    border-radius: 8px;
+    flex-direction: column; 
+    display: none;
+    border: 1px solid #D1BBA7;
+    padding: 0px;
+    z-index: 10;
+}
+
+.submenu li {
+    flex-direction: column;
+    margin: 0;
+    padding: 8px 12px;
+    border-bottom: 1px solid #D1BBA7;
+    color: #4A3B32;
+}
+
+.submenu li:last-child {
+    border-bottom: none;
+}
+
+.menu li:hover .submenu {
+    display: flex;
+}
+
+.lista {
+    display: inline-flex;
+    list-style: none;
+    flex-direction: column;
+}
+
+ul {
+    display: inline-flex;
+    list-style: none;
+}
+
+.centro {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+}
+.circulo {
+  background-color:#FAF6EE;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+}
+.perfil {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+p {
+    width: fit-content;
+}
+
+.balao-login {
+    background-color: #E8D2C0; 
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px; 
+    color: #4A3B32;
+}
+
+.botao-prosseguir {
+    display: flex;
+    align-items: center;
+    color: #8C5A3A;
+    margin: 15px auto 0 auto; 
+    width: fit-content;
+}
+
+h3 {
+    text-align: center;
+}
+
+.rodape-grid {
+    background-color: #5C4033; 
+    color: #F8F1E9;           
+    width: 100%;
+    margin-top: auto; 
+    padding-bottom: 10px;
+}
+
+.rodape-coluna {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;      
+    margin: 0 auto;   
+}
