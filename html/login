@@ -4,76 +4,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <ul class="menu">
 
-                <li> 
-                    <button> <a href="login.html"> Login </a> </button>
+    <div class="topo"></div>
+    <header class="cabecalho">
+        <nav class="menu-esquerdo">
+            <ul class="menu-esquerdo-ul">
+                <li class="tem-menu">
+                    <button class="botao-menu"><a href="contato.html">Contato</a></button>
+                     <ul class="submenu">
+                        <li>
+                            <a href="contato.html">Enviar recado</a>
+                        </li>
+                            
+                        <li>
+                            <a href="contato.html">Avaliar</a>
+                        </li>
+                     </ul>
                 </li>
-            
-                <li> 
-                    <button> <a href="sobre.html"> Sobre nós </a> </button>
-                    
-                    <ul class="submenu">
-                        <li class="submenu li"> <a href="sobre.html"> Quem somos? </a> </li>
-                        <li class="submenu li"> <a href="sobre.html"> Contato </a> </li>
-                    </ul>
-                </li>
+                <li class="tem-menu">
+                    <button class="botao-menu"><a href="sobre.html">Sobre nós</a></button>
+                     <ul class="submenu">
+                        <li>
+                            <a href="sobre.html">Quem somos?</a>
+                        </li>
+                            
 
-                <li>
-                   <button>  <a href="dashboard.html"> Menu </a>  </button> 
-                   <ul class="submenu">
-                        <li class="submenu li"> <a href="dashboard.html"> Perfil </a> </li>
-                        <li class="submenu li"> <a href="dashboard.html"> Mais visitados </a> </li>
-                    </ul>
+                     </ul>
                 </li>
-
-                <li>
-                   <button>  <a href="produtos.html"> Produtos </a>  </button> 
-                   <ul class="submenu">
-                        <li class="submenu li"> <a href="produtos.html"> Vegetais </a> </li>
-                        <li class="submenu li"> <a href="produtos.html"> Pães </a> </li>
-                    </ul>
-                </li>
-                
-                <li>
-                  <button>  <a href="index.html"> Sua lista </a>  </button>  
-                  <ul class="submenu">
-                        <li class="submenu li"> <a href="index.html"> Adicionar item </a> </li>
-                        <li class="submenu li"> <a href="index.html"> Histórico de listas </a> </li>
-                    </ul>
-                </li>
-
-                <li>
-                    <button> <a href="contato.html"> Contato </a> </button>
-                </li>
-                
             </ul>
+        </nav>
+
+        <a class="logo" href="index.html">Bremster</a>
+
+        <nav class="menu-direito">
+            <ul class="menu-direito-ul">
+                 <li class="tem-menu">
+                     
+                     <button class="botao-menu"><a href="index.html">Explorar</a></button>
+                     <ul class="submenu">
+                        <li>
+                            <a href="index.html">Promoções</a>
+                        </li>
+                            
+                        <li>
+                            <a href="index.html">Para você</a>
+                        </li>
+                     </ul>
+                </li>
+
+                <li class="tem-menu">
+                      <button class="botao-menu"><a href="login.html">Login</a></button>
+                     <ul class="submenu">
+                        <li>
+                            <a href="login.html">Entrar</a>
+                        </li>
+                            
+                        <li>
+                            <a href="login.html">Cadastrar</a>
+                        </li>
+                     </ul>
+                </li>
+
+                 <li class="tem-menu">
+                 <button class="botao-menu"><a href="dashboard.html">Carrinho</a> </button>
+                     <ul class="submenu">
+                        <li>
+                            <a href="dashboard.html">Minha sacola</a>
+                        </li>
+
+                     </ul>
+                </li>
+            </ul>
+        </nav>
+            
+            
+
+        
+
     </header>
-  
-    <h1>Login</h1>
-      <form class="balao-login" action="dashboard.html">
-    
-        <label for="email" >Email</label> 
-        <br> <input type="email" id="email" placeholder="Insira seu email" required> <br>
-        <br>
-        <label for="senha" >Senha</label>
-        <br> <input type="password" id="senha" placeholder="Insira sua senha" required>
-        <br>
 
-        <div class="botao-prosseguir">
-        <button type="submit" >Prosseguir</button>
+    <main class="conteudo-login">
+        <section class="form-login">
+            <h1>Login</h1>
+            <label>Email</label>
+            <input type="email" placeholder="Insira seu email">
+
+            <label>Senha</label>
+            <input type="password" placeholder="Insira sua senha">
+
+            <button>Entrar</button>
+        </section>
+
+        <div class="imagem-login">
+            <img class="moda" src="img/Moda.png" alt="Mulher e Moda">
         </div>
-    </form>
+    </main>
+    <footer class="rodape">
+            <div class="conteudo">
+                <div class="coluna-1">
+                    <div class="logo-rodape">
+                        <h1>Br</h1> <p>Bremster</p> 
+                    </div>
 
-    <footer class="rodape-grid">
-        <h3>Nos sigas nas redes</h3>
-        <p class="rodape-coluna"><a href="https://www.instagram.com/paisefilhosoficial/" target="_blank"> Instagram </a></p>
-        <p class="rodape-coluna">Contato: (81)90123-4567</p>
-        <p class="rodape-coluna">Endereço: Rua dos 3 irmaos, Janga - Paulista</p>
-    </footer>
+                    <p>Rua xx, <br> Recife, Pernambuco</p>
+                    
+                    <div class="copyright">
+                    <p> © 2026 Bremster. All rights reserved</p>
+                    </div>
+                </div>
+                <div class="coluna-2">
+                    <h4>Email</h4>
+                    <p>bremster@gmail.com</p>
+
+                    <h4>Telefone</h4>
+                    <p>(81) 9 1234-5678</p>
+
+                </div>
+                <div class="coluna-3">
+                    <h4>Horário</h4>
+                    <p>Segunda - sexta</p>
+                    <p>08am - 06pm</p>
+
+                </div>
+                <div class="coluna-4">
+                    <h4>Nos siga</h4>
+                    <a href="">Instagram</a> <br>
+                    <a href="">Facebook</a> <br>
+                    <a href="">Twitter</a>
+
+                </div>
+
+            </div>
+            
+        </footer>
+ 
 </body>
+   
 </html>
