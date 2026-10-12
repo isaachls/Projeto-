@@ -1,73 +1,218 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/style.css">
-    <title>Produtos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaqueta Y2Bros</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <ul class="menu">
 
-                <li> 
-                    <button> <a href="login.html"> Login </a> </button>
+    <div class="topo"></div>
+    <header class="cabecalho">
+        <nav class="menu-esquerdo">
+            <ul class="menu-esquerdo-ul">
+                <li class="tem-menu">
+                    <button class="botao-menu"><a href="contato.html">Contato</a></button>
+                     <ul class="submenu">
+                        <li>
+                            <a href="contato.html">Enviar recado</a>
+                        </li>
+                            
+                        <li>
+                            <a href="contato.html">Avaliar</a>
+                        </li>
+                     </ul>
                 </li>
-            
-                <li> 
-                    <button> <a href="sobre.html"> Sobre nós </a> </button>
-                    
-                    <ul class="submenu">
-                        <li class="submenu li"> <a href="sobre.html"> Quem somos? </a> </li>
-                        <li class="submenu li"> <a href="sobre.html"> Contato </a> </li>
-                    </ul>
-                </li>
+                <li class="tem-menu">
+                    <button class="botao-menu"><a href="sobre.html">Sobre nós</a></button>
+                     <ul class="submenu">
+                        <li>
+                            <a href="sobre.html">Quem somos?</a>
+                        </li>
+                            
 
-                <li>
-                   <button>  <a href="dashboard.html"> Menu </a>  </button> 
-                   <ul class="submenu">
-                        <li class="submenu li"> <a href="dashboard.html"> Perfil </a> </li>
-                        <li class="submenu li"> <a href="dashboard.html"> Mais visitados </a> </li>
-                    </ul>
+                     </ul>
                 </li>
-
-                <li>
-                   <button>  <a href="produtos.html"> Produtos </a>  </button> 
-                   <ul class="submenu">
-                        <li class="submenu li"> <a href="produtos.html"> Vegetais </a> </li>
-                        <li class="submenu li"> <a href="produtos.html"> Pães </a> </li>
-                    </ul>
-                </li>
-                
-                <li>
-                  <button>  <a href="index.html"> Sua lista </a>  </button>  
-                  <ul class="submenu">
-                        <li class="submenu li"> <a href="index.html"> Adicionar item </a> </li>
-                        <li class="submenu li"> <a href="index.html"> Histórico de listas </a> </li>
-                    </ul>
-                </li>
-
-                <li>
-                    <button> <a href="contato.html"> Contato </a> </button>
-                </li>
-                
             </ul>
+        </nav>
+
+        <a class="logo" href="index.html">Bremster</a>
+
+        <nav class="menu-direito">
+            <ul class="menu-direito-ul">
+                 <li class="tem-menu">
+                     
+                     <button class="botao-menu"><a href="index.html">Explorar</a></button>
+                     <ul class="submenu">
+                        <li>
+                            <a href="index.html">Promoções</a>
+                        </li>
+                            
+                        <li>
+                            <a href="index.html">Para você</a>
+                        </li>
+                     </ul>
+                </li>
+
+                <li class="tem-menu">
+                      <button class="botao-menu"><a href="login.html">Login</a></button>
+                     <ul class="submenu">
+                        <li>
+                            <a href="login.html">Entrar</a>
+                        </li>
+                            
+                        <li>
+                            <a href="login.html">Cadastrar</a>
+                        </li>
+                     </ul>
+                </li>
+
+                 <li class="tem-menu">
+                 <button class="botao-menu"><a href="dashboard.html">Carrinho</a> </button>
+                     <ul class="submenu">
+                        <li>
+                            <a href="dashboard.html">Minha sacola</a>
+                        </li>
+                            
+
+                     </ul>
+                </li>
+            </ul>
+        </nav>
+            
+            
+
     </header>
-    <h1>Catálogo</h1>
-    <ol>
-        <li>Pão 5x</li>
-        <li>Ovos 5x</li>
-        <li>Leite 3x</li>
-        <li>Frutas 2x</li>
-        <li>Verduras 1x</li>
-    </ol>
-    <footer class="rodape-grid">
-        <h3>Nos sigas nas redes</h3>
-        <p class="rodape-coluna"><a href="https://www.instagram.com/paisefilhosoficial/" target="_blank"> Instagram </a></p>
-        <p class="rodape-coluna">Contato: (81)90123-4567</p>
-        <p class="rodape-coluna">Endereço: Rua dos 3 irmaos, Janga - Paulista</p>
-    </footer>
-    
-</body>
+
+    <main class="conteudo-produto">
+
+        <section class="imagem-produto">
+            
+            <p>Camisas e casacos - Casacos - Y2K </p>
+
+            <div class="jaqueta">
+                 <div class="principal">
+                    <div class="balao-roupa">
+                        <img  src="img/Jaqueta-rosa.png">
+                    </div>
+                 </div>
+
+                 <div class="outras">
+
+                    <div class="balao-roupa">
+                        <img src="img/Jaqueta-rosa.png">
+                    </div>
+                    <div class="balao-roupa">
+                        <img src="img/pedaco-jaqueta-1.png">
+                    </div>
+                    <div class="balao-roupa">
+                        <img src="img/pedaco-jaqueta-2.png">
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="infos-roupa">
+
+            <div class="infos-marca">
+                <div class="marca">
+                  <img src="img/Y.png"> 
+                  <p>Y2Bros</p>
+                </div>
+                <p>R7K-4XQ-92M</p>
+            </div>
+
+            <div class="nome-preco">
+                <h2>Jaqueta Y2Bros Estilizada</h2>
+                <h2>R$99,99</h2>
+            </div>
+            
+            <div class="cor">
+                <p>Cor - <strong>Rosa</strong></p>
+                
+                <div class="foto-cores">
+                    <div class="balao-roupa">
+                      <img src="img/Jaqueta-rosa.png">
+                    </div>
+
+                    <div class="balao-roupa">
+                      <img src="img/jaqueta.marrom.png">
+                    </div>
+                </div>
+            </div>
+                <p>Tamanho</p>
+            <div class="TAM">
+                
+
+                <div class="balao-roupa">
+                      <p>P</p>
+                </div>
+
+                <div class="balao-roupa">
+                      <p>M</p>
+                </div>
+
+                <div class="balao-roupa">
+                      <p>G</p>
+                </div>
+
+                
+            </div>
+            <p class="guia">Guia de tamanhos</p>
+                <div class="add-carrinho">
+                    <button class="botao-produto">Prosseguir</button>
+                    <button class="botao-produto-estrela"><img src="img/estrela-vetor.png"></button>
+                </div>
+
+
+
+
+        </section>
+
+
+    </main>
+
+    <footer class="rodape">
+            <div class="conteudo">
+                <div class="coluna-1">
+                    <div class="logo-rodape">
+                        <h1>Br</h1> <p>Bremster</p> 
+                    </div>
+
+                    <p>Rua xx, <br> Recife, Pernambuco</p>
+                    
+                    <div class="copyright">
+                    <p> © 2026 Bremster. All rights reserved</p>
+                    </div>
+                </div>
+                <div class="coluna-2">
+                    <h4>Email</h4>
+                    <p>bremster@gmail.com</p>
+
+                    <h4>Telefone</h4>
+                    <p>(81) 9 1234-5678</p>
+
+                </div>
+                <div class="coluna-3">
+                    <h4>Horário</h4>
+                    <p>Segunda - sexta</p>
+                    <p>08am - 06pm</p>
+
+                </div>
+                <div class="coluna-4">
+                    <h4>Nos siga</h4>
+                    <a href="">Instagram</a> <br>
+                    <a href="">Facebook</a> <br>
+                    <a href="">Twitter</a>
+
+                </div>
+
+            </div>
+            
+        </footer>
+</body>    
+
 </html>
