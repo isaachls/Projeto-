@@ -1,92 +1,154 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <ul class="menu">
 
-                <li> 
-                    <button> <a href="login.html"> Login </a> </button>
+    <div class="topo"></div>
+    <header class="cabecalho">
+        <nav class="menu-esquerdo">
+            <ul class="menu-esquerdo-ul">
+                <li class="tem-menu">
+                    <button class="botao-menu"><a href="">Contato</a></button>
+                     <ul class="submenu">
+                        <li>
+                            <a href="contato.html">Enviar recado</a>
+                        </li>
+                            
+                        <li>
+                            <a href="contato.html">Avaliar</a>
+                        </li>
+                     </ul>
                 </li>
-            
-                <li> 
-                    <button> <a href="sobre.html"> Sobre nós </a> </button>
-                    
-                    <ul class="submenu">
-                        <li class="submenu li"> <a href="sobre.html"> Quem somos? </a> </li>
-                        <li class="submenu li"> <a href="sobre.html"> Contato </a> </li>
-                    </ul>
-                </li>
+                <li class="tem-menu">
+                    <button class="botao-menu"><a href="sobre.html">Sobre nós</a></button>
+                     <ul class="submenu">
+                        <li>
+                            <a href="sobre.html">Quem somos?</a>
+                        </li>
+                            
 
-                <li>
-                   <button>  <a href="dashboard.html"> Menu </a>  </button> 
-                   <ul class="submenu">
-                        <li class="submenu li"> <a href="dashboard.html"> Perfil </a> </li>
-                        <li class="submenu li"> <a href="dashboard.html"> Mais visitados </a> </li>
-                    </ul>
-                </li>
-
-                <li>
-                   <button>  <a href="produtos.html"> Produtos </a>  </button> 
-                   <ul class="submenu">
-                        <li class="submenu li"> <a href="produtos.html"> Vegetais </a> </li>
-                        <li class="submenu li"> <a href="produtos.html"> Pães </a> </li>
-                    </ul>
-                </li>
-                
-                <li>
-                  <button>  <a href="index.html"> Sua lista </a>  </button>  
-                  <ul class="submenu">
-                        <li class="submenu li"> <a href="index.html"> Adicionar item </a> </li>
-                        <li class="submenu li"> <a href="index.html"> Histórico de listas </a> </li>
-                    </ul>
-                </li>
-
-                <li>
-                    <button> <a href="contato.html"> Contato </a> </button>
+                     </ul>
                 </li>
             </ul>
+        </nav>
+
+        <a class="logo" href="index.html">Bremster</a>
+
+        <nav class="menu-direito">
+            <ul class="menu-direito-ul">
+                 <li class="tem-menu">
+                     
+                     <button class="botao-menu"><a href="index.html">Explorar</a></button>
+                     <ul class="submenu">
+                        <li>
+                            <a href="index.html">Promoções</a>
+                        </li>
+                            
+                        <li>
+                            <a href="index.html">Para você</a>
+                        </li>
+                     </ul>
+                </li>
+
+                <li class="tem-menu">
+                      <button class="botao-menu"><a href="login.html">Login</a></button>
+                     <ul class="submenu">
+                        <li>
+                            <a href="login.html">Entrar</a>
+                        </li>
+                            
+                        <li>
+                            <a href="login.html">Cadastrar</a>
+                        </li>
+                     </ul>
+                </li>
+
+                 <li class="tem-menu">
+                 <button class="botao-menu"><a href="dashboard.html">Carrinho</a> </button>
+                     <ul class="submenu">
+                        <li>
+                            <a href="dashboard.html">Minha sacola</a>
+                        </li>
+                            
+
+                     </ul>
+                </li>
+            </ul>
+        </nav>
+            
+            
+
+        
+
     </header>
 
-    <section class="pagina-topo">
-        <div class="texto-topo">
-            <div>
-                <h1>Contatos</h1>
-                <p>Fale com a gente e tire suas dúvidas.</p>
+    <main class="conteudo-contato">
+        
+        <div class="explicacao-contato">
+            <div class="frase-contato">
+            <h1>Fale com <strong>a gente</strong>!</h1>
+            <p>Relate problemas no processo de compra ou deixe uma avaliação!</p>
             </div>
+            <a href=""><img src="img\Estrela.png" alt="Adesivo de estrela"></a> <br>
+            <a href="">Deixar avalição</a>
         </div>
-    
 
-    <nav class="container-contato">
-    <div class="balao-contato">
-        <form action="#"> 
-        <label for="email" >Email</label> 
-        <br> <input type="email" id="email" placeholder="Insira seu email" required> <br>
-        <br>
-        <label for="conteudo" >Conteúdo</label>
-        <br> <input type="text" id="mensagem" placeholder="Insira a mensagem" required>
-        <br>
+        <section class="form-contato"> 
+            <label>Email</label>
+            <input type="email" placeholder="Insira seu email">
 
-        <div class="botao-prosseguir">
-        <button type="submit" >Enviar</button>
+            <label>Recado</label>
+            <input type="text" placeholder="Insira seu recado">
+
+            <button>Enviar</button>
+        </section>
+
+        
+    </main>
+
+   <footer class="rodape">
+        <div class="conteudo">
+            <div class="coluna-1">
+                <div class="logo-rodape">
+                    <h1>Br</h1> <p>Bremster</p> 
+                </div>
+
+                <p>Rua xx, <br> Recife, Pernambuco</p>
+                
+                <div class="copyright">
+                  <p> © 2026 Bremster. All rights reserved</p>
+                </div>
+            </div>
+            <div class="coluna-2">
+                <h4>Email</h4>
+                <p>bremster@gmail.com</p>
+
+                <h4>Telefone</h4>
+                <p>(81) 9 1234-5678</p>
+
+            </div>
+            <div class="coluna-3">
+                <h4>Horário</h4>
+                <p>Segunda - sexta</p>
+                <p>08am - 06pm</p>
+
+            </div>
+            <div class="coluna-4">
+                <h4>Nos siga</h4>
+                <a href="">Instagram</a> <br>
+                <a href="">Facebook</a> <br>
+                <a href="">Twitter</a>
+
+            </div>
+
         </div>
-         </form>
-    </div>
-    </nav>
-</section>
-    
-    <footer class="rodape-grid">
-        <h3>Nos sigas nas redes</h3>
-        <p class="rodape-coluna"><a href="https://www.instagram.com/paisefilhosoficial/" target="_blank"> Instagram </a></p>
-        <p class="rodape-coluna">Contato: (81)90123-4567</p>
-        <p class="rodape-coluna">Endereço: Rua dos 3 irmaos, Janga - Paulista</p>
+        
     </footer>
- 
-</body>
+</body> 
+    
 </html>
