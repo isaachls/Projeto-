@@ -1,4 +1,4 @@
 # Projeto-
-Projeto 3 irmãos - PNT
+Projeto Bremster
 
-Site para uma padaria de bairro que facilita reserva de compras e visualização de catálogo.
+  Um brechó online para a venda de roupas.
