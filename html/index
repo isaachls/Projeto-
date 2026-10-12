@@ -1,75 +1,220 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de compras</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Explorar</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <ul class="menu">
 
-                <li> 
-                    <button> <a href="login.html"> Login </a> </button>
+    <div class="topo"></div>
+    <header class="cabecalho">
+        <nav class="menu-esquerdo">
+            <ul class="menu-esquerdo-ul">
+                <li class="tem-menu">
+                    <button class="botao-menu"><a href="contato.html">Contato</a></button>
+                     <ul class="submenu">
+                        <li>
+                            <a href="contato.html">Enviar recado</a>
+                        </li>
+                            
+                        <li>
+                            <a href="contato.html">Avaliar</a>
+                        </li>
+                     </ul>
                 </li>
-            
-                <li> 
-                    <button> <a href="sobre.html"> Sobre nós </a> </button>
-                    
-                    <ul class="submenu">
-                        <li class="submenu li"> <a href="sobre.html"> Quem somos? </a> </li>
-                        <li class="submenu li"> <a href="sobre.html"> Contato </a> </li>
-                    </ul>
-                </li>
+                <li class="tem-menu">
+                    <button class="botao-menu"><a href="sobre.html">Sobre nós</a></button>
+                     <ul class="submenu">
+                        <li>
+                            <a href="sobre.html">Quem somos?</a>
+                        </li>
+                            
 
-                <li>
-                   <button>  <a href="dashboard.html"> Menu </a>  </button> 
-                   <ul class="submenu">
-                        <li class="submenu li"> <a href="dashboard.html"> Perfil </a> </li>
-                        <li class="submenu li"> <a href="dashboard.html"> Mais visitados </a> </li>
-                    </ul>
+                     </ul>
                 </li>
-
-                <li>
-                   <button>  <a href="produtos.html"> Produtos </a>  </button> 
-                   <ul class="submenu">
-                        <li class="submenu li"> <a href="produtos.html"> Vegetais </a> </li>
-                        <li class="submenu li"> <a href="produtos.html"> Pães </a> </li>
-                    </ul>
-                </li>
-                
-                <li>
-                  <button>  <a href="index.html"> Sua lista </a>  </button>  
-                  <ul class="submenu">
-                        <li class="submenu li"> <a href="index.html"> Adicionar item </a> </li>
-                        <li class="submenu li"> <a href="index.html"> Histórico de listas </a> </li>
-                    </ul>
-                </li>
-
-                <li>
-                    <button> <a href="contato.html"> Contato </a> </button>
-                </li>
-                
             </ul>
+        </nav>
+
+        <a class="logo" href="index.html">Bremster</a>
+
+        <nav class="menu-direito">
+            <ul class="menu-direito-ul">
+                 <li class="tem-menu">
+                     
+                     <button class="botao-menu"><a href="index.html">Explorar</a></button>
+                     <ul class="submenu">
+                        <li>
+                            <a href="index.html">Promoções</a>
+                        </li>
+                            
+                        <li>
+                            <a href="index.html">Para você</a>
+                        </li>
+                     </ul>
+                </li>
+
+                <li class="tem-menu">
+                      <button class="botao-menu"><a href="login.html">Login</a></button>
+                     <ul class="submenu">
+                        <li>
+                            <a href="login.html">Entrar</a>
+                        </li>
+                            
+                        <li>
+                            <a href="login.html">Cadastrar</a>
+                        </li>
+                     </ul>
+                </li>
+
+                 <li class="tem-menu">
+                 <button class="botao-menu"><a href="dashboard.html">Carrinho</a> </button>
+                     <ul class="submenu">
+                        <li>
+                            <a href="dashboard.html">Minha sacola</a>
+                        </li>
+                            
+
+                     </ul>
+                </li>
+            </ul>
+        </nav>
+            
+            
+
     </header>
-    <h1>Lista de compras</h1>
-    <img
-    src="https://www.tenda.com/blog/wp-content/uploads/2021/09/Compras-mobile.png" alt="Mulher fazendo compras"
-    >
-    <ul class="lista">
-        <li>Manteiga</li>
-        <li>Feijão</li>
-        <li>Maçã</li>
-    </ul>
-    
-    <footer class="rodape-grid">
-        <h3>Nos sigas nas redes</h3>
-        <p class="rodape-coluna"><a href="https://www.instagram.com/paisefilhosoficial/" target="_blank"> Instagram </a></p>
-        <p class="rodape-coluna">Contato: (81)90123-4567</p>
-        <p class="rodape-coluna">Endereço: Rua dos 3 irmaos, Janga - Paulista</p>
-    </footer>
- 
-</body>
+
+    <main class="conteudo-explorar">
+
+        <div class="header"> 
+            
+            <div class="texto-header">
+            <p><strong>Roupas Y2K com</strong> <br> descontos de até</p>
+            <h3>40%</h3> 
+            
+            </div>
+            <div class="final-header">
+                <p>Desconto de 10% na sua primeira compra </p>
+                <p>CUPOM: Primeiracompra </p>
+            </div>
+
+        </div>  
+
+      <h1>Novidades para <strong>você</strong></h1>
+
+      <div class="lista-produtos">
+
+        <div class="produto">
+            <a href="produto.html"><div class="balao-roupa">
+                <img  src="img/Jaqueta-rosa.png">
+            </div></a>
+            <div class="info-roupa">
+            <p class="nome-produto">Jaqueta Y2Bros</p>
+            <p class="preco-produto">R$99,90</p>
+            </div>
+            
+        </div>
+
+        <div class="produto">
+            <div class="balao-roupa">
+                <img  src="img/azul.png">
+            </div>
+            <div class="info-roupa">
+            <p class="nome-produto">Jaqueta Justyle</p>
+            <p class="preco-produto">R$89,90</p>        
+            </div>
+        
+        </div>
+
+        <div class="produto">
+            <div class="balao-roupa">
+                <img  src="img/vermelha.png">
+            </div>
+            <div class="info-roupa">
+            <p class="nome-produto">Camiseta social estilizada</p>
+            <p class="preco-produto">R$119,90</p>
+            </div>
+        
+        </div>
+
+        <div class="produto">
+            <div class="balao-roupa">
+                <img  src="img/calca.png">
+            </div>
+            <div class="info-roupa">
+             <p class="nome-produto">Calça moletom Forever Young</p>
+            <p class="preco-produto">R$49,90</p>
+            </div>
+        
+        </div>
+
+        <div class="produto">
+            <div class="balao-roupa">
+                <img  src="img/blusa-marrom.png">
+            </div>
+            <div class="info-roupa">
+            <p class="nome-produto">Camisa Oversized Moto</p>
+            <p class="preco-produto">R$80,50</p>
+        </div>
+            
+        </div>
+
+        <div class="produto">
+            <div class="balao-roupa">
+                <img  src="img/caveira.png">
+            </div>
+            <div class="info-roupa">
+            <p class="nome-produto">Camisa Oversized Caveira</p>
+            <p class="preco-produto">R$99,90</p>
+            </div>
+
+        </div>
+
+      </div>
+      
+         
+
+    </main>
+
+    <footer class="rodape">
+            <div class="conteudo">
+                <div class="coluna-1">
+                    <div class="logo-rodape">
+                        <h1>Br</h1> <p>Bremster</p> 
+                    </div>
+
+                    <p>Rua xx, <br> Recife, Pernambuco</p>
+                    
+                    <div class="copyright">
+                    <p> © 2026 Bremster. All rights reserved</p>
+                    </div>
+                </div>
+                <div class="coluna-2">
+                    <h4>Email</h4>
+                    <p>bremster@gmail.com</p>
+
+                    <h4>Telefone</h4>
+                    <p>(81) 9 1234-5678</p>
+
+                </div>
+                <div class="coluna-3">
+                    <h4>Horário</h4>
+                    <p>Segunda - sexta</p>
+                    <p>08am - 06pm</p>
+
+                </div>
+                <div class="coluna-4">
+                    <h4>Nos siga</h4>
+                    <a href="">Instagram</a> <br>
+                    <a href="">Facebook</a> <br>
+                    <a href="">Twitter</a>
+
+                </div>
+
+            </div>
+            
+        </footer>
+</body>    
+
 </html>
