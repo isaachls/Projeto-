@@ -1,166 +1,890 @@
-html {
-    height: 100%;
-    font-size:large;
-}
 
-body {
+html, body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body{
+    margin:0;
+    font-size:x-large;
+    background-color:#EDE9DE;
+    font-family:Arial, Helvetica, sans-serif;
+    display: flex; 
+    flex-direction: column;
     min-height: 100vh;
-    margin: 0;
-    background-color: #FAF6EE;
-    color: #4A3B32; 
-    display: flex;
-    align-items: center;
-    flex-direction: column;
 }
 
-header {   
+
+a{
+    text-decoration:none
+}
+
+li{
+    list-style:none
+}
+
+.topo{
+    height:16px;
+    background-color:#331C13;
+    width: 100%;  
+    flex-shrink: 0;
+    z-index: 5;
+}
+
+.submenu{
+    display:none
+}
+
+.cabecalho{
+    display:flex;
+    justify-content:space-between;
+    padding: 0px 40px;
+    margin-top: 16px;
+}
+
+.menu-direito-ul{
+    display:flex;
+    gap:30px;
+}
+
+.menu-esquerdo-ul{
+    display:flex;
+    gap:30px
+}
+
+.logo{
+    font-size:250%;
+    font-weight:bold;
+    display:flex;
+    color:#331C13
+}
+
+
+.tem-menu{
+    position:relative
+}
+
+.botao-menu{
+    background-color: #331C13;
+    border: 1px solid transparent;
+    padding:8px;
+    border-radius:4px;
+}
+
+.botao-menu a{
+    color:#EDE9DE
+}
+
+.botao-menu:hover{
+    background-color:#fff6d763;
+    border: 1px solid #331C13;
+    border-radius:4px;
+    padding:8px
+}
+
+.botao-menu:hover a{
+    color:#331C13
+}
+
+.submenu{
+    position:absolute;
+    white-space:nowrap;
+    margin:0;
+    padding:0;
+    font-size:small
+}
+
+.submenu li{
+    padding:8px;
+    background-color:#331C13;
+    border-radius:2px;
+    margin:2px;
+    border: 1px solid transparent;
+}
+
+.submenu li:hover{
+    padding:8px;
+    background-color:#fff6d7;
+    border-radius:2px;
+    margin:2px;
+    border: 1px solid #331C13;
+}
+
+.submenu li:hover a{
+    color:#331C13
+}
+
+.submenu a{
+    color:#fff6d7
+}
+
+.tem-menu:hover .submenu{
+    display:block;
+}
+
+
+/* LOGIN */
+
+.conteudo-login{
+    display:flex;
+    align-items:flex-start;
+    gap:180px;
+    justify-content:center;
+    margin-top:0;
+    flex: 1 0 auto; 
+}
+
+.form-login{
+    margin-top:60px;
+    display:flex;
+    flex:2;
+    flex-direction:column;
+    gap:16px;
+    max-width: 290px;
+}
+
+.form-login button{
+    margin-top:30px;
+    width:fit-content;
+    padding:8px;
+    margin: 30px auto 0;
+    background-color:#331C13;
+    color:#fff6d7;
+    border: 1px solid transparent;
+    border-radius:4px
+}
+
+.form-login button:hover{
+    margin-top:30px;
+    width:fit-content;
+    padding:8px;
+    margin: 30px auto 0;
+    background-color:#fff6d7;
+    color:#331C13;
+    border: 1px solid #331c13;
+    border-radius:4px
+}
+
+.form-login h1{
+    display: inline-block;
+    width:fit-content;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+.form-login h1, label{
+    color:#331C13;
+}
+
+.form-login label{
+    font-weight:500;
+}
+
+.form-login input{
+    background-color:#EDE9DE;
+    border: 1px solid #331C13;
+    border-radius: 2px;
+    padding:8px;
+    font-style:italic;
+}
+
+.imagem-login{
+    width:40%;
+}
+
+.moda{
+    flex:1;
+    width:120%;
+    height: auto;
+}
+
+.rodape{
     width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    box-sizing: border-box;
-    padding: 20px 30px 0 0;
+    bottom: 0vh;
+    margin-top:auto;
+    height:auto
+}
+.conteudo{
+    display:flex;
+    justify-content:space-between;
+    background-color:#331C13;
+    color:#fff6d7;
+    padding: 0px 40px;
+    margin-top: 16px;
+    font-size:17px
 }
 
-.pagina-topo{
-    margin: 0 auto;
-    position:relative;
+.conteudo h4{
+    font-weight:200;
+    color:#ede9deb2
+}
+
+.conteudo p{
+    font-weight:450
+}
+
+.coluna-1 p{
+    font-weight:200
+}
+
+.logo-rodape{
+    display:flex;
+    align-items:center;
+    gap:5px
+}
+
+.logo-rodape p{
+    font-weight:lighter
+}
+
+.coluna-4 a{
+    color:#EDE9DE
+}
+
+.copyright{
+    font-weight: lighter;
+    color:#ede9deb2
+}
+
+/* CONTATO */
+
+.conteudo-contato{
+    display:flex;
+    flex: 1 0 auto;
+    margin:60px;
+    justify-content:center;
+    gap:180px;
+    color:#331C13;
+    align-items:flex-start
+}
+
+.explicacao-contato{
+    display:flex;
+    flex-direction:column;
+    gap:16px
+}
+.frase-contato p{
+    font-style:italic;
+}
+
+.frase-contato{
+    margin-bottom:50px;
+}
+
+.frase-contato strong{
+    font-style:italic;
+    font-weight:bold;
+    text-decoration:underline;
+    text-underline-offset: 4px;
+}
+
+.explicacao-contato a{
+    color:#331C13;
+    font-style:italic;
+    text-decoration:underline;
+    text-underline-offset: 4px;
+}
+
+.form-contato{
+    margin-top:26px;
+    display:flex;
+    flex:2;
+    flex-direction:column;
+    gap:16px;
+    max-width: 290px;
+    background-color:#331C13;
+    padding:16px;
+    border-radius:4px;
+    margin-bottom: 0;
+}
+
+.form-contato button{
+    margin-top:30px;
+    width:fit-content;
+    padding:8px;
+    margin: 30px auto 0;
+    background-color:#fff6d7;
+    color:#331C13;
+    border: 1px solid transparent;
+    border-radius:4px
+}
+
+.form-contato button:hover{
+    margin-top:30px;
+    width:fit-content;
+    padding:8px;
+    margin: 30px auto 0;
+    background-color:#331C13;
+    color:#fff6d7;
+    border: 1px solid #fff6d7;
+    border-radius:4px
+}
+
+.form-contato label{
+    font-weight:500;
+    color:#fff6d7;
+}
+
+.form-contato input{
+    background-color:#331C13;
+    border: 1px solid #fff6d7;
+    border-radius: 2px;
+    padding:8px;
+    color:#EDE9DE
+}
+
+/* SOBRE */
+
+.conteudo-sobre{
+    display:flex;
+    flex: 1 0 auto;
+    margin:60px;
+    justify-content:center;
+    gap:180px;
+    color:#331C13
+}
+
+.conteudo-1{
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+}
+
+.frase-sobre p{
+    font-style:italic
+}
+
+.frase-sobre strong{
+    font-style:italic;
+    font-weight:bold;
+    text-decoration:underline;
+    text-underline-offset: 4px;    
+}
+
+.balao-texto-2{
+    background-color:#331C13;
+    color:#EDE9DE;
+    border-radius:4px;
+    border: 2px solid transparent;
+    padding:8px;
+    text-align:center;
+    max-width: 240px;  
+    font-weight:lighter;
+}
+
+.balao-texto-2 strong{
+    font-size:larger;
+    font-style:italic
+}
+
+
+.balao-texto{
+    background-color:#331C13;
+    color:#EDE9DE;
+    border-radius:4px;
+    border: 2px solid transparent;
+    padding:8px;
+    max-width:600px;
+    text-align:center;
+    font-weight:lighter;
+}
+
+.balao-texto strong{
+    font-size:larger;
+    font-style:italic
+}
+
+.conteudo-2{
+    display:flex;
+    flex-direction:column;
+    gap:16px
+}
+
+.conteudo-2 a{
+    font-style:italic;
+    font-weight:light;
+    text-decoration:underline;
+    text-underline-offset: 4px;  
+    color:#331C13;
+    margin-top:16px  
+}
+
+.balao-e-sorriso{
+    display:flex;
+    gap:100px
+}
+
+
+.conteudo-explorar{
+    flex:1;
+    margin:60px;
+    justify-content:center;
+    gap:180px;
+    color:#331C13
+}
+
+.header{
+    margin-top: 20px;
+    background-image:url(../img/header.png);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.texto-header{
+    font-size: large;
+    text-align: center;
+    display:flex;
+    justify-content: center;
     align-items: center;
-    font-size:20px;
-    color:var(#4A3B32);
-    margin-bottom:8px;
-    padding:20px 500px 0 0;
+    color:#331C13;
+    font-style: italic;
+    font-size:100%;
 }
 
-.balao-contato{
-   background-color: #E8D2C0; 
-   border-radius: 8px;
-   margin: 10px;
-   padding: 10px; 
-   color: #4A3B32;
+.texto-header strong{
+    font-style: normal;
 }
 
-.container-contato{
-        width: 100%;
-    max-width: 350px;
+.texto-header h3{
+    margin-left:8px;
+    font-weight: 900;
+    font-size: 180%;
 }
 
-button {
-    border-radius: 8px;
-    border: none;
-    padding: 8px 16px;
-    color: #FFFFFF; 
-    background-color: #8C5A3A; 
-    box-sizing: border-box;
-    cursor: pointer;
-}
 
-a {
-    color: inherit;          
-    text-decoration: none; 
-}
-
-.menu {
-    gap: 25px;
-}
-
-.menu li {
-    position: relative;
-}
-
-.submenu {
-    position: absolute;
-    background-color: #F3E5D8; 
-    top: 100%;
-    left: 0;
-    border-radius: 8px;
-    flex-direction: column; 
-    display: none;
-    border: 1px solid #D1BBA7;
-    padding: 0px;
-    z-index: 10;
-}
-
-.submenu li {
-    flex-direction: column;
-    margin: 0;
-    padding: 8px 12px;
-    border-bottom: 1px solid #D1BBA7;
-    color: #4A3B32;
-}
-
-.submenu li:last-child {
-    border-bottom: none;
-}
-
-.menu li:hover .submenu {
+.final-header{
+    width:fit-content;
+    color:#fff6d7;
+    font-style: italic;
     display: flex;
+    justify-content: space-between;
+    width:100%;
+    padding: 5px 1px;
+    background-color:#331C13
 }
 
-.lista {
-    display: inline-flex;
-    list-style: none;
-    flex-direction: column;
+.final-header p {
+    margin: 0; 
+    font-size: medium;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
-ul {
-    display: inline-flex;
-    list-style: none;
+.conteudo-explorar{
+    flex:1
 }
 
-.centro {
+.conteudo-explorar h1{
+    font-size:larger;
+    margin-top:40px;
+    color: #331C13;
+    font-weight:bold;
+}
+
+.conteudo-explorar h1 strong{
+    font-style:italic;
+    font-weight:bold;
+    text-decoration:underline;
+    text-underline-offset: 4px;
+}
+
+.lista-produtos{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column; 
-}
-.circulo {
-  background-color:#FAF6EE;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  overflow: hidden;
-  position: relative;
-}
-.perfil {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto; 
+    margin-top: 5vh;
+    flex-wrap: wrap; 
+    margin-top: 20px;
+    gap: 20px;
 }
 
-p {
-    width: fit-content;
-}
-
-.balao-login {
-    background-color: #E8D2C0; 
-    border-radius: 8px;
-    margin: 10px;
-    padding: 10px; 
-    color: #4A3B32;
-}
-
-.botao-prosseguir {
+.produto{
+    width: 200px; 
     display: flex;
-    align-items: center;
-    color: #8C5A3A;
-    margin: 15px auto 0 auto; 
-    width: fit-content;
-}
-
-h3 {
+    flex-direction: column;
+    text-align: center;
+    min-width: 200px; 
     text-align: center;
 }
 
-.rodape-grid {
-    background-color: #5C4033; 
-    color: #F8F1E9;           
-    width: 100%;
-    margin-top: auto; 
-    padding-bottom: 10px;
+.balao-roupa{
+    background-color: #F8F8F8;
+    border: 2px solid #331c1356;
+    border-radius: 4px;
+    width:200px;
+    height: 200px;
+    display: flex;
+    margin-bottom: 8px;
+    justify-content: center;
+    align-items: center;
 }
 
-.rodape-coluna {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;      
-    margin: 0 auto;   
+.balao-roupa img{
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+
+.nome-produto{
+    font-style: italic;
+    font-weight: 550;
+    font-size: 80%;
+    max-width: 180px;
+    margin-top: 8px;
+    display: block; 
+    width: 100%;
+    margin: 0 auto; 
+    color:#331C13
+}
+
+.preco-produto{
+    font-style: italic;
+    font-weight: lighter; 
+    font-size: large;   
+    color:#331C13;
+    margin-top: 4px;
+}
+
+.conteudo-carrinho{
+    display:flex;
+    flex: 1 0 auto;
+    margin:20px auto;
+    justify-content:center;
+    gap:80px;
+    color:#331C13;
+    align-items:flex-start;
+    width: 90%; 
+    height:auto;
+}
+
+.carrinho{
+    flex:1.5;
+    transform: scale(0.85);
+    transform-origin: top center;
+}
+
+.resumo{
+    flex:1;
+    min-width: 300px;
+    transform: scale(0.85);
+    transform-origin: top center;
+}
+
+.carrinho h1{
+    color:#331C13;
+}
+
+.carrinho h1 strong{
+    color:#331C13;
+    font-style:italic;
+    text-decoration:underline;
+    text-underline-offset: 4px;
+}
+
+.traco{
+    height:2px;
+    margin-bottom: 20px;
+    background-color:#331c134b;
+    width: 100%;  
+}
+
+.pedido{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    width: 100%; 
+    margin: 0 auto;
+}
+
+.camisa-1{
+    display:flex;
+    align-items: center;
+    gap:20px;
+    padding:16px;
+}
+
+.infos-pedido h2, .infos-pedido p, .preco h2 {   
+    margin: 0;
+    font-size: larger;
+}
+
+.infos-pedido{
+    display:flex;
+    flex-direction: column;
+    gap:15px;
+}
+
+.preco {
+  margin-left: auto;   
+}
+.camisa-2{
+    display:flex;
+    align-items: center;
+    gap:20px;
+    padding:16px;
+}
+
+.balao-roupa-carrinho{
+    background-color: #F8F8F8;
+    border: 2px solid #331c1356;
+    border-radius: 4px;
+    width:200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.balao-roupa-carrinho img{
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.resumo h1{
+    color:#331C13;
+}
+
+.resumo h1 strong{
+    color:#331C13;
+    font-style:italic;
+    text-decoration:underline;
+    text-underline-offset: 4px;
+}
+
+.pedido-valor{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    font-weight: lighter;
+}
+
+.total-valor{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    font-weight: normal;
+}
+
+.subtotal h3{
+    font-weight: lighter;
+}
+
+.valor h3{
+    font-weight: lighter;
+}
+
+.cupom{
+    display:flex;
+    flex-direction: column;
+
+}
+
+.cupom input{
+    margin-top: 8px;
+    width:50%;
+    height: auto;
+    margin-bottom:8px;
+    background-color:#fff6d756;
+    border: 1px solid #331c1357;
+    border-radius: 2px;
+    padding:8px;
+    color:#331c13
+}
+
+.cupom button{
+    margin:auto;
+    width:fit-content;
+    transform: scale(1.45);
+    margin-top: 20px;
+    transform-origin: top center;
+    padding:8px;
+    background-color:#331C13;
+    color:#fff6d7;
+    border: 1px solid transparent;
+    border-radius:4px
+}
+
+.cupom button:hover{
+    margin:auto;
+    width:fit-content;
+    transform: scale(1.45);
+    margin-top: 20px;
+    transform-origin: top center;
+    padding:8px;
+    background-color:#fff6d7;
+    color:#331C13;
+    border: 1px solid #331c13;
+    border-radius:4px
+}
+
+.cupom label{
+    margin-top: 8px;
+    font-weight:normal;
+    color:#331C13;
+}
+
+.balao-roupa-selecionado{
+    background-color: #F8F8F8;
+    border: 2px solid #331c13bd;
+    border-radius: 4px;
+    width:200px;
+    height: 200px;
+    display: flex;
+    margin-bottom: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.conteudo-produto{
+    display:flex;
+    flex: 1 0 auto;
+    margin:20px auto;
+    justify-content:center;
+    gap:80px;
+    color:#331C13;
+    align-items:flex-start;
+    width: 90%; 
+    height:auto;
+}
+
+.imagem-produto{
+    flex: 1.5 0 auto
+}
+
+.infos-roupa{
+    flex: 1.5 0 auto 
+}
+
+.imagem-produto p{
+    font-size: medium;
+}
+
+.jaqueta{
+    justify-content: center;
+    align-items: center;
+}
+
+.principal div{
+    display:flex;
+    width:100%;
+    height: 350px;
+   
+
+}
+
+
+
+.outras{
+    height:auto;
+    max-width: 80%;
+    zoom: 0.6; 
+    display: flex;
+    gap:25px;
+    margin-top: 20px;
+    justify-content: center;
+
+}
+
+
+.marca{
+    display:flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.marca img{
+    display:flex;
+    width:100%;
+    height:auto
+}
+.infos-marca{
+    display:flex;
+    justify-content: space-between;
+}
+
+.foto-cores{
+    display:flex;
+    gap: 16px;
+    max-width: 35%;
+    zoom: 0.35; 
+}
+
+.TAM{
+    display:flex;
+    gap: 16px;
+    max-width: 35%;
+    zoom: 0.35; 
+}
+
+.foto-cores img, .TAM img {
+  width: 100%;
+  height: auto;
+}
+
+
+.cupom input{
+    margin-top: 8px;
+    width:50%;
+    height: auto;
+    margin-bottom:8px;
+    background-color:#fff6d756;
+    border: 1px solid #331c1357;
+    border-radius: 2px;
+    padding:8px;
+    color:#331c13
+}
+
+.botao-produto{
+    margin-top:30px;
+    padding:8px;
+    margin: 30px auto 0;
+    background-color:#331C13;
+    color:#fff6d7;
+    border: 1px solid transparent;
+    border-radius:4px;
+    max-width:70%;    
+}
+
+.botao-produto:hover{
+    margin-top:30px;
+    padding:8px;
+    margin: 30px auto 0;
+    background-color:#fff6d7;
+    color:#331C13;
+    border: 1px solid #331c13;
+    border-radius:4px;
+    max-width:70%; 
+}
+
+.botao-produto-estrela{
+    margin-top:30px;
+    padding:8px;
+    margin: 30px auto 0;
+    background-color:#fff6d7;
+    color:#331C13;
+    border: 1px solid #331c13;
+    border-radius:4px;
+}
+
+.botao-produto-estrela:hover{
+    margin-top:30px;
+    padding:8px;
+    margin: 30px auto 0;
+    background-color:#331c138c;
+    border: 1px solid #331c1357;
+    border-radius:4px; 
+}
+
+.guia{
+    font-size:medium
+}
+
+.balao-roupa p{
+    font-size:190%
 }
