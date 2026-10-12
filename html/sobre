@@ -1,74 +1,163 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre nós</title>
-     <link rel="stylesheet" href="../css/style.css">
+    <title>Sobre</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <ul class="menu">
 
-                <li> 
-                    <button> <a href="login.html"> Login </a> </button>
+    <div class="topo"></div>
+    <header class="cabecalho">
+        <nav class="menu-esquerdo">
+            <ul class="menu-esquerdo-ul">
+                <li class="tem-menu">
+                    <button class="botao-menu"><a href="contato.html">Contato</a></button>
+                     <ul class="submenu">
+                        <li>
+                            <a href="contato.html">Enviar recado</a>
+                        </li>
+                            
+                        <li>
+                            <a href="contato.html">Avaliar</a>
+                        </li>
+                     </ul>
                 </li>
-            
-                <li> 
-                    <button> <a href="sobre.html"> Sobre nós </a> </button>
-                    
-                    <ul class="submenu">
-                        <li class="submenu li"> <a href="sobre.html"> Quem somos? </a> </li>
-                        <li class="submenu li"> <a href="sobre.html"> Contato </a> </li>
-                    </ul>
+                <li class="tem-menu">
+                    <button class="botao-menu"><a href="sobre.html">Sobre nós</a></button>
+                     <ul class="submenu">
+                        <li>
+                            <a href="sobre.html">Quem somos?</a>
+                        </li>
+                            
+                     </ul>
                 </li>
-
-                <li>
-                   <button>  <a href="dashboard.html"> Menu </a>  </button> 
-                   <ul class="submenu">
-                        <li class="submenu li"> <a href="dashboard.html"> Perfil </a> </li>
-                        <li class="submenu li"> <a href="dashboard.html"> Mais visitados </a> </li>
-                    </ul>
-                </li>
-
-                <li>
-                   <button>  <a href="produtos.html"> Produtos </a>  </button> 
-                   <ul class="submenu">
-                        <li class="submenu li"> <a href="produtos.html"> Vegetais </a> </li>
-                        <li class="submenu li"> <a href="produtos.html"> Pães </a> </li>
-                    </ul>
-                </li>
-                
-                <li>
-                  <button>  <a href="index.html"> Sua lista </a>  </button>  
-                  <ul class="submenu">
-                        <li class="submenu li"> <a href="index.html"> Adicionar item </a> </li>
-                        <li class="submenu li"> <a href="index.html"> Histórico de listas </a> </li>
-                    </ul>
-                </li>
-
-                <li>
-                    <button> <a href="contato.html"> Contato </a> </button>
-                </li>
-                
             </ul>
+        </nav>
+
+        <a class="logo" href="index.html">Bremster</a>
+
+        <nav class="menu-direito">
+            <ul class="menu-direito-ul">
+                 <li class="tem-menu">
+                     
+                     <button class="botao-menu"><a href="index.html">Explorar</a></button>
+                     <ul class="submenu">
+                        <li>
+                            <a href="index.html">Promoções</a>
+                        </li>
+                            
+                        <li>
+                            <a href="index.html-">Para você</a>
+                        </li>
+                     </ul>
+                </li>
+
+                <li class="tem-menu">
+                      <button class="botao-menu"><a href="login.html">Login</a></button>
+                     <ul class="submenu">
+                        <li>
+                            <a href="login.html">Entrar</a>
+                        </li>
+                            
+                        <li>
+                            <a href="login.html">Cadastrar</a>
+                        </li>
+                     </ul>
+                </li>
+
+                 <li class="tem-menu">
+                 <button class="botao-menu"><a href="dashboard.html">Carrinho</a> </button>
+                     <ul class="submenu">
+                        <li>
+                            <a href="dashboard.html">Minha sacola</a>
+                        </li>
+                            
+
+                     </ul>
+                </li>
+            </ul>
+        </nav>
+            
+            
+
+        
+
     </header>
-    <h1>Quem somos?</h1>
-    <h3> <em> Venha conhecer um pouco da nossa empresa </em></h3>
-    <p> A loja online foi desenvolvida com o intuito de facilitar seu processo de compras e chegar ao mercado pronto apenas para pegar o que já foi escolhido. <br> Somos uma empresa fundada por 3 irmãos que querem transformar o bairro. <br> Desde 2024 nos certificando do <strong>seu</strong> conforto. </p>
-    <h3> Fale com a gente! </h3>
-    <ul class="lista">
-        <li>Endereço: Rua dos 3 irmaos, Janga - Paulista</li>
-        <li>Email: 3irmaos@gmail.com </li>
-        <li>Telefone: (81)91234-5678 </li>
-    </ul>
+
+    <main class="conteudo-sobre">
+        
+        <div class="conteudo-1">
+            <div class="frase-sobre">
+            <h1>Quem <strong>somos</strong>?</h1>
+            <p>Conheça nossa história e participe dela</p>
+            </div>
+            <div class="balao-texto-2">
+                <p>Desde 2023, buscamos a curadoria certa para você encontrar peças 
+                    que realmente combinam com o <strong>seu estilo</strong>.</p>
+            </div>
+        </div>
+
+        <section class="conteudo-2"> 
+            <div class="balao-texto">
+                <p>Somos uma loja  de roupas com essência de brechó feita para quem valoriza estilo,
+                 autenticidade e peças que <strong>fazem sentido!</strong></p>
+            </div>
+
+            <div class="balao-e-sorriso">
+                <div class="balao-texto-2">
+                    <p>Moda, para nós, também é sobre <strong>descobrir, reinventar e 
+                    dar novos caminhos</strong> às peças.</p>
+                </div>
+                <img src="img/Sorriso.png" alt="Adesivo de sorriso">
+            </div>
+            <a href="dashboard.html">Explore a remster e encontre o que combina com você.</a>
+        
+            
+        </section>
+
+        
+    </main>
+
+    <footer class="rodape">
+            <div class="conteudo">
+                <div class="coluna-1">
+                    <div class="logo-rodape">
+                        <h1>Br</h1> <p>Bremster</p> 
+                    </div>
+
+                    <p>Rua xx, <br> Recife, Pernambuco</p>
+                    
+                    <div class="copyright">
+                    <p> © 2026 Bremster. All rights reserved</p>
+                    </div>
+                </div>
+                <div class="coluna-2">
+                    <h4>Email</h4>
+                    <p>bremster@gmail.com</p>
+
+                    <h4>Telefone</h4>
+                    <p>(81) 9 1234-5678</p>
+
+                </div>
+                <div class="coluna-3">
+                    <h4>Horário</h4>
+                    <p>Segunda - sexta</p>
+                    <p>08am - 06pm</p>
+
+                </div>
+                <div class="coluna-4">
+                    <h4>Nos siga</h4>
+                    <a href="">Instagram</a> <br>
+                    <a href="">Facebook</a> <br>
+                    <a href="">Twitter</a>
+
+                </div>
+
+            </div>
+            
+        </footer>
+</body>   
     
-    <footer class="rodape-grid">
-        <h3>Nos sigas nas redes</h3>
-        <p class="rodape-coluna"><a href="https://www.instagram.com/paisefilhosoficial/" target="_blank"> Instagram </a></p>
-        <p class="rodape-coluna">Contato: (81)90123-4567</p>
-        <p class="rodape-coluna">Endereço: Rua dos 3 irmaos, Janga - Paulista</p>
-    </footer>
-</body>
 </html>
