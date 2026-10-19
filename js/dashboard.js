@@ -1,5 +1,5 @@
-const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-console.log(carrinho);
+let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+console.log(JSON.parse(localStorage.getItem("carrinho")));
 let percentualDesconto = 0;
 const listaCarrinho = document.querySelector("#lista-carrinho");
 const subtotalElemento = document.querySelector("#subtotal-valor");
@@ -27,20 +27,19 @@ function mostrarCarrinho () {
     divItem.classList.add("produto-carrinho");
 
     divItem.innerHTML = `
-
-      <div class="balao-roupa-carrinho">
-          <img src="${produto.imagem}" alt="${produto.nome}">
-      </div>
-      <div class="infos-pedido">
-          <h2 class="nome-info">${produto.nome}</h2>
-          <p class="preco-info">Qtd: ${produto.quantidade}</p>
-      </div>
-      <div class="preco">
-          <h2 class="preco-produto">R$${precoItem.toFixed(2).replace(".", ",")}</h2>
-          <button class="btn-remover" data-index="${index}">Remover</button>
-      </div>
-
-    `;
+            <div class="balao-roupa-carrinho">
+                <img src="${produto.corSelecionada || produto.imagem}" alt="${produto.nome}">
+            </div>
+            <div class="infos-pedido">
+                <h2 class="nome-info">${produto.nome}</h2>
+                <p class="preco-info">Tam: ${produto.tamanhoSelecionado || 'N/A'}</p>
+                <p class="preco-info">Qtd: ${produto.quantidade}</p>
+            </div>
+            <div class="preco">
+                <h2 class="preco-produto">R$${precoItem.toFixed(2).replace(".", ",")}</h2>
+                <button class="btn-remover" data-index="${index}">Remover</button>
+            </div>
+        `;
     
     listaCarrinho.appendChild(divItem);
 
