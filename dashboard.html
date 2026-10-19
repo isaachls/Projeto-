@@ -16,11 +16,11 @@
                     <button class="botao-menu"><a href="contato.html">Contato</a></button>
                      <ul class="submenu">
                         <li>
-                            <a href="contato.html">Enviar recado</a>
+                            <button class="botao-transparente"><a href="contato.html">Enviar recado</a></button>
                         </li>
                             
                         <li>
-                            <a href="contato.html">Avaliar</a>
+                            <button class="botao-transparente"><a href="contato.html">Avaliar</a></button>
                         </li>
                      </ul>
                 </li>
@@ -28,7 +28,7 @@
                     <button class="botao-menu"><a href="sobre.html">Sobre nós</a></button>
                      <ul class="submenu">
                         <li>
-                            <a href="sobre.html">Quem somos?</a>
+                            <button class="botao-transparente"><a href="sobre.html">Quem somos?</a></button>
                         </li>
                             
 
@@ -46,11 +46,11 @@
                      <button class="botao-menu"><a href="index.html">Explorar</a></button>
                      <ul class="submenu">
                         <li>
-                            <a href="index.html">Promoções</a>
+                            <button class="botao-transparente"><a href="index.html">Promoções</a></button>
                         </li>
                             
                         <li>
-                            <a href="index.html">Para você</a>
+                            <button class="botao-transparente"><a href="index.html">Para você</a></button>
                         </li>
                      </ul>
                 </li>
@@ -59,11 +59,11 @@
                       <button class="botao-menu"><a href="login.html">Login</a></button>
                      <ul class="submenu">
                         <li>
-                            <a href="login.html">Entrar</a>
+                            <button class="botao-transparente"><a href="login.html">Entrar</a></button>
                         </li>
                             
                         <li>
-                            <a href="login.html">Cadastrar</a>
+                            <button class="botao-transparente"><a href="login.html">Cadastrar</a></button>
                         </li>
                      </ul>
                 </li>
@@ -72,15 +72,15 @@
                  <button class="botao-menu"><a href="dashboard.html">Carrinho</a> </button>
                      <ul class="submenu">
                         <li>
-                            <a href="dashboard.html">Minha sacola</a>
+                            <button class="botao-transparente"><a href="dashboard.html">Minha sacola</a></button>
                         </li>
                             
+
                      </ul>
                 </li>
             </ul>
         </nav>
-            
-
+  
     </header>
 
     <main class="conteudo-carrinho">
@@ -90,42 +90,11 @@
             
             <div class="traco"></div>
 
-            <div class="pedido">
+            <div class="pedido" id="lista-carrinho">
+
+
+            </div>
                 
-                <div class="camisa-1">
-                    <input type="checkbox" class="selecionar">
-                    <div class="balao-roupa-carrinho">
-                        <img  src="img/blusa-marrom.png">
-                    </div>
-                    
-                    <div class="infos-pedido">
-                     <h2>Camisa Oversized</h2>
-                     <p>R$80,50</p>
-                     <p>TAM: P</p>
-                     <p>COR: Marrom</p>
-                    </div>
-                      <div class="preco">
-                       <h2>R$80,50</h2>
-                      </div>
-                </div>
-
-                 <div class="traco"></div>
-
-                <div class="camisa-2">
-                    <input type="checkbox" class="selecionar">
-                    <div class="balao-roupa-carrinho">
-                    <img  src="img/vermelha.png">
-                    </div>
-                    <div class="infos-pedido">
-                      <h2>Camisa Social Wear It</h2>
-                      <p>R$119,90</p>
-                      <p>TAM: P</p>
-                      <p>COR: Vermelho</p>
-                    </div>
-                    <div class="preco">
-                      <h2>R$119,90</h2>
-                    </div>
-                </div>
 
             <div class="traco"></div>
 
@@ -136,25 +105,20 @@
 
             <div class="traco"></div>
 
-            <div class="pedido-valor">
-                <div class="subtotal">
-                    <h3>Subtotal</h3>
-                    <h3>Taxa de entrega</h3>
-                </div>
+
                 <div class="valor">
-                    <h3>R$90,50</h3>
+                    <h3> Subtotal com taxas </h3>
+                    <h3 id="subtotal-valor">R$ 0,00</h3>
                 </div>
-            </div>
+
+            
             
             <div class="traco"></div>
 
-            <div class="total-valor">
-                <div class="total">
-                    <h3>Total</h3>
-                </div>
-                <div class="valor-total">
-                    <h3>R$90,50</h3>
-                </div>
+
+            <div class="valor-total">
+              <h3> Total </h3>
+              <h3 id="total-valor">R$ 0,00</h3>
             </div>
 
 
@@ -163,7 +127,7 @@
             <div class="cupom">
             
                 <label>Cupom</label>
-                <input type="text" placeholder="Insira o código de cupom">
+                <input id="cupom" type="text" placeholder="Insira o código de cupom">
 
                 <button>Prosseguir</button>
             
@@ -212,6 +176,8 @@
             </div>
             
         </footer>
+
+        <script src="js/dashboard.js"></script>
 </body>   
     
 </html>
