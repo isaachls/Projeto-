@@ -1,6 +1,6 @@
 
 const buttons = document.querySelectorAll(".adicionar-carrinho");
-const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+const produtoEscolhido = JSON.parse(localStorage.getItem("produtoEscolhido")) || [];
 
 buttons.forEach(function(button){button.addEventListener("click", function() {
 
@@ -9,27 +9,21 @@ buttons.forEach(function(button){button.addEventListener("click", function() {
     const precoTexto = produto.querySelector(".precoProduto").textContent;
     const imagem = produto.querySelector(".balao-roupa img").src;
     const preco = parseFloat(precoTexto.replace("R$", "").replace(",", ".").trim());
-
-    console.log(nome, preco);
-
-    const itemExistente = carrinho.find(item => item.nome === nome);
-
-    if (itemExistente) {
-        itemExistente.quantidade += 1;
-    } else {
-        carrinho.push({
+    const produtoEscolhido = {
             nome: nome,
             preco: preco,
             imagem: imagem,
-            quantidade: 1
-        });
-    }
+            imagensCores: [],
+        };
+        if (nome === "Jaqueta Y2Bros") {
+            produtoEscolhido.imagensCores = [
+                imagem, 
+                "img/jaqueta.marrom.png" 
+            ];
+        }
 
-    localStorage.setItem("carrinho", JSON.stringify(carrinho));
-    alert(`${nome} foi adicionado ao carrinho!`);
-    console.log(carrinho)
-
-
-});});
-
-// selecionando o produto certo
+    localStorage.setItem("produtoEscolhido", JSON.stringify(produtoEscolhido));
+    console.log(produtoEscolhido);
+    window.location.href = 'produto.html';
+});
+});
