@@ -69,6 +69,7 @@ li{
     border: 1px solid transparent;
     padding:8px;
     border-radius:4px;
+    transition: all 0.2s ease;
 }
 
 .botao-menu a{
@@ -151,7 +152,8 @@ li{
     background-color:#331C13;
     color:#fff6d7;
     border: 1px solid transparent;
-    border-radius:4px
+    border-radius:4px;
+    transition: all 0.2s ease;
 }
 
 .form-login button:hover{
@@ -305,7 +307,8 @@ li{
     background-color:#fff6d7;
     color:#331C13;
     border: 1px solid transparent;
-    border-radius:4px
+    border-radius:4px;
+    transition: all 0.2s ease;
 }
 
 .form-contato button:hover{
@@ -528,7 +531,7 @@ li{
 }
 
 
-.nome-produto{
+.nomeProduto{
     font-style: italic;
     font-weight: 550;
     font-size: 80%;
@@ -540,7 +543,7 @@ li{
     color:#331C13
 }
 
-.preco-produto{
+.precoProduto{
     font-style: italic;
     font-weight: lighter; 
     font-size: large;   
@@ -599,12 +602,6 @@ li{
     margin: 0 auto;
 }
 
-.camisa-1{
-    display:flex;
-    align-items: center;
-    gap:20px;
-    padding:16px;
-}
 
 .infos-pedido h2, .infos-pedido p, .preco h2 {   
     margin: 0;
@@ -620,11 +617,41 @@ li{
 .preco {
   margin-left: auto;   
 }
-.camisa-2{
-    display:flex;
+
+.produto-carrinho {
+    display: flex;
     align-items: center;
-    gap:20px;
-    padding:16px;
+    gap: 20px;
+    padding: 16px;
+}
+
+.btn-remover {
+    margin-top: 8px;
+    padding: 6px 12px;
+    background-color: #331C13;
+    color: #fff6d7;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+}
+
+.btn-remover:hover {
+    background-color: #fff6d7;
+    color: #331C13;
+    border: 1px solid #331C13;
+}
+
+.valor{
+    display:flex;
+    justify-content:space-between
+}
+
+.valor-total{
+    display:flex;
+    justify-content:space-between;
+    font-weight:bolder;
 }
 
 .balao-roupa-carrinho{
@@ -636,6 +663,7 @@ li{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.2s ease;
 }
 
 
@@ -706,7 +734,8 @@ li{
     background-color:#331C13;
     color:#fff6d7;
     border: 1px solid transparent;
-    border-radius:4px
+    border-radius:4px;
+    transition: all 0.2s ease;
 }
 
 .cupom button:hover{
@@ -849,6 +878,7 @@ li{
     border: 1px solid transparent;
     border-radius:4px;
     max-width:70%;    
+    transition: all 0.2s ease;
 }
 
 .botao-produto:hover{
@@ -870,6 +900,7 @@ li{
     color:#331C13;
     border: 1px solid #331c13;
     border-radius:4px;
+    transition: all 0.2s ease;
 }
 
 .botao-produto-estrela:hover{
@@ -888,3 +919,32 @@ li{
 .balao-roupa p{
     font-size:190%
 }
+
+.botao-transparente{
+    background-color: transparent;
+    border: none;
+}
+
+.adicionar-carrinho{
+    margin-top:8px;
+    padding:8px;
+    margin: 0px auto 0;
+    background-color:#331C13;
+    color:#fff6d7;
+    border: 1px solid transparent;
+    border-radius:4px;
+    max-width:70%;   
+    transition: all 0.2s ease;
+}
+
+.adicionar-carrinho:hover{
+    margin-top:8px;
+    padding:8px;
+    margin: 0px auto 0;
+    background-color:#fff6d7;
+    color:#331C13;
+    border: 1px solid #331c13;
+    border-radius:4px;
+    max-width:70%; 
+}
+
