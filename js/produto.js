@@ -145,7 +145,6 @@ botoesTamanho.forEach(function(botao) {
         ultimoProduto.quantidade = 1;
 
         let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-        carrinho.push(ultimoProduto);
 
         let itemExistente = carrinho.find(function(produto) {
             return produto.nome === ultimoProduto.nome &&
@@ -157,7 +156,6 @@ botoesTamanho.forEach(function(botao) {
             itemExistente.quantidade += 1;
         } else {
             carrinho.push(ultimoProduto);
-            console.log("Novo produto adicionado ao carrinho:", ultimoProduto);
         }
 
         localStorage.setItem("carrinho", JSON.stringify(carrinho));
