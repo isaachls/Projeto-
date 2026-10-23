@@ -268,9 +268,6 @@ li{
     font-style:italic;
 }
 
-.frase-contato{
-    margin-bottom:50px;
-}
 
 .frase-contato strong{
     font-style:italic;
@@ -674,7 +671,27 @@ li{
 }
 
 
+
+
 .balao-roupa-carrinho img{
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+.balao-roupa-carrinho-2{
+    background-color: #F8F8F8;
+    border: 2px solid #331c1356;
+    border-radius: 4px;
+    width:30%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.balao-roupa-carrinho-2 img{
   width: 90%;
   height: 90%;
   object-fit: contain;
@@ -972,4 +989,43 @@ li{
     background-color:transparent;
     border: none;
     color:#331C13; 
+}
+
+.nota{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width:50vh;
+    height:10vh;
+}
+
+.nota button{
+    width:8vh;
+    height:8vh;
+    border:none;
+    background-color: transparent;
+    background-image: url(../img/Estrela.png);
+    background-position: center;
+    background-size: contain;
+}
+
+.opacidade-baixa {
+    opacity: 0.3;
+}
+
+#avaliacao{
+    margin-top:15px;
+    width:fit-content;
+    padding:8px;
+    background-color:#331C13;
+    color:#fff6d7;
+    border: 1px solid transparent;
+    border-radius:4px;
+    transition: all 0.2s ease;
+    margin-top:5vh;
+}
+
+.espaco-avaliacao{
+    margin:0;
 }
