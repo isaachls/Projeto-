@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="topo"></div>
+    <header class="cabecalho">
+       <nav class="menu-esquerdo">
+            <ul class="menu-esquerdo-ul">
+                <li class="tem-menu">
+                    <button class="botao-menu"><a href="contato.html">Contato</a></button>
+                     <ul class="submenu">
+                        <li>
+                            <button class="botao-transparente"><a href="contato.html">Enviar recado</a></button>
+                        </li>
+                            
+                        <li>
+                            <button class="botao-transparente"><a href="contato.html">Avaliar</a></button>
+                        </li>
+                     </ul>
+                </li>
+                <li class="tem-menu">
+                    <button class="botao-menu"><a href="sobre.html">Sobre nós</a></button>
+                     <ul class="submenu">
+                        <li>
+                            <button class="botao-transparente"><a href="sobre.html">Quem somos?</a></button>
+                        </li>
+                            
+
+                     </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <a class="logo" href="index.html">Bremster</a>
+
+        <nav class="menu-direito">
+            <ul class="menu-direito-ul">
+                 <li class="tem-menu">
+                     
+                     <button class="botao-menu"><a href="index.html">Explorar</a></button>
+                     <ul class="submenu">
+                        <li>
+                            <button class="botao-transparente"><a href="index.html">Promoções</a></button>
+                        </li>
+                            
+                        <li>
+                            <button class="botao-transparente"><a href="index.html">Para você</a></button>
+                        </li>
+                     </ul>
+                </li>
+
+                <li class="tem-menu">
+                      <button class="botao-menu"><a href="login.html">Login</a></button>
+                     <ul class="submenu">
+                        <li>
+                            <button class="botao-transparente"><a href="login.html">Entrar</a></button>
+                        </li>
+                            
+                        <li>
+                            <button class="botao-transparente"><a href="login.html">Cadastrar</a></button>
+                        </li>
+                     </ul>
+                </li>
+
+                 <li class="tem-menu">
+                 <button class="botao-menu"><a href="dashboard.html">Carrinho</a> </button>
+                     <ul class="submenu">
+                        <li>
+                            <button class="botao-transparente"><a href="dashboard.html">Minha sacola</a></button>
+                        </li>
+                            
+
+                     </ul>
+                </li>
+            </ul>
+        </nav>
+  
+    </header>
+
+    <main class="conteudo-cadastro">
+
+    <form class="form-cadastro" action="cadastro.php" method="POST">
+        <h1>Cadastro</h1>
+        
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Insira seu email" required>
+
+        <label>Senha</label>
+        <input type="password" id="senha" name="senha" placeholder="Insira sua senha" required>
+
+        <label>Confirme sua senha</label>
+        <input type="password" id="segunda-senha" name="senha" placeholder="Insira sua senha novamente" required>
+
+        <button type="submit" id="cadastro">Cadastrar</button>
+    </form> 
+
+        <div class="imagem-login">
+            <img class="moda" src="img/Moda.png" alt="Mulher e Moda">
+        </div>
+    </main>
+    <footer class="rodape">
+            <div class="conteudo">
+                <div class="coluna-1">
+                    <div class="logo-rodape">
+                        <h1>Br</h1> <p>Bremster</p> 
+                    </div>
+
+                    <p>Rua xx, <br> Recife, Pernambuco</p>
+                    
+                    <div class="copyright">
+                    <p> © 2026 Bremster. All rights reserved</p>
+                    </div>
+                </div>
+                <div class="coluna-2">
+                    <h4>Email</h4>
+                    <p>bremster@gmail.com</p>
+
+                    <h4>Telefone</h4>
+                    <p>(81) 9 1234-5678</p>
+
+                </div>
+                <div class="coluna-3">
+                    <h4>Horário</h4>
+                    <p>Segunda - sexta</p>
+                    <p>08am - 06pm</p>
+
+                </div>
+                <div class="coluna-4">
+                    <h4>Nos siga</h4>
+                    <a href="">Instagram</a> <br>
+                    <a href="">Facebook</a> <br>
+                    <a href="">Twitter</a>
+
+                </div>
+
+            </div>
+            
+        </footer>
+
+    <script src="js/cadastro.js"></script>
+ 
+</body>
+   
+</html>
