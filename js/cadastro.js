@@ -1,26 +1,13 @@
-<?php
-include('conexao.php');
+let senha = document.querySelector("#senha");
+let senhaDois = document.querySelector("#segunda-senha");
+const form = document.querySelector("#form-cadastro");
 
-$nome = $_POST['nome'];
-$email = $_POST['email'];
-$senha = $_POST['senha'];
+form.addEventListener('submit', function (e) {
+  const primeiraSenha = senha.value;
+  const segundaSenha = senhaDois.value;
 
-$sqlBusca = "SELECT * FROM CLIENTE WHERE email = '$email'";
-$resultadoBusca = $pdo->query($sqlBusca);
-
-if ($resultadoBusca->rowCount() > 0) {
- 
-    echo "<script>alert('Este e-mail já está cadastrado!'); window.history.back();</script>";
-} else {
-  
-    $sqlSalvar = "INSERT INTO CLIENTE (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
-    $resultadoSalvar = $pdo->query($sqlSalvar);
-
-    if ($resultadoSalvar) {
-        header("Location: dashboard.html");
-        exit; 
-    } else {
-        echo "Erro ao cadastrar usuário.";
-    }
-}
-?>
+  if (segundaSenha !== primeiraSenha) {
+    alert("As senhas não coincidem.");
+    e.preventDefault();
+  }
+});
