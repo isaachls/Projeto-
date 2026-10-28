@@ -1,17 +1,12 @@
 <?php
 session_start();
-$estaLogado = isset($_SESSION['nome']) ? 'true' : 'false';
 ?>
-<script>
-    const usuarioLogado = <?php echo $estaLogado; ?>;
-</script>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jaqueta Y2Bros</title>
+    <title>Sobre</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -94,19 +89,38 @@ $estaLogado = isset($_SESSION['nome']) ? 'true' : 'false';
             
     </header>
 
-    <main class="conteudo-produto">
+    <main class="conteudo-sobre">
+        
+        <div class="conteudo-1">
+            <div class="frase-sobre">
+            <h1>Quem <strong>somos</strong>?</h1>
+            <p>Conheça nossa história e participe dela</p>
+            </div>
+            <div class="balao-texto-2">
+                <p>Desde 2023, buscamos a curadoria certa para você encontrar peças 
+                    que realmente combinam com o <strong>seu estilo</strong>.</p>
+            </div>
+        </div>
 
-        <section class="imagem-produto" id="imagem-produto">
+        <section class="conteudo-2"> 
+            <div class="balao-texto">
+                <p>Somos uma loja  de roupas com essência de brechó feita para quem valoriza estilo,
+                 autenticidade e peças que <strong>fazem sentido!</strong></p>
+            </div>
+
+            <div class="balao-e-sorriso">
+                <div class="balao-texto-2">
+                    <p>Moda, para nós, também é sobre <strong>descobrir, reinventar e 
+                    dar novos caminhos</strong> às peças.</p>
+                </div>
+                <img src="img/Sorriso.png" alt="Adesivo de sorriso">
+            </div>
+            <a href="dashboard.php">Explore a remster e encontre o que combina com você.</a>
+        
             
-
         </section>
 
-        <section class="infos-roupa" id="info-roupa">
-
-            
-        </section>
-
-
+        
     </main>
 
     <footer class="rodape">
@@ -147,7 +161,6 @@ $estaLogado = isset($_SESSION['nome']) ? 'true' : 'false';
             </div>
             
         </footer>
-        <script src="js/produto.js"></script>
-</body>    
-
+</body>   
+    
 </html>
