@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -15,74 +18,77 @@
         <nav class="menu-esquerdo">
             <ul class="menu-esquerdo-ul">
                 <li class="tem-menu">
-                    <button class="botao-menu"><a href="contato.html">Contato</a></button>
+                    <button class="botao-menu"><a href="contato.php">Contato</a></button>
                     <ul class="submenu">
                         <li>
-                            <button class="botao-transparente"><a href="contato.html">Enviar recado</a></button>
+                            <button class="botao-transparente"><a href="contato.php">Enviar recado</a></button>
                         </li>
-
                         <li>
-                            <button class="botao-transparente"><a href="contato.html">Avaliar</a></button>
+                            <button class="botao-transparente"><a href="contato.php">Avaliar</a></button>
                         </li>
-                    </ul>
+                     </ul>
                 </li>
                 <li class="tem-menu">
-                    <button class="botao-menu"><a href="sobre.html">Sobre nós</a></button>
+                    <button class="botao-menu"><a href="sobre.php">Sobre nós</a></button>
                     <ul class="submenu">
                         <li>
-                            <button class="botao-transparente"><a href="sobre.html">Quem somos?</a></button>
+                            <button class="botao-transparente"><a href="sobre.php">Quem somos?</a></button>
                         </li>
-
-
-                    </ul>
+                     </ul>
                 </li>
             </ul>
         </nav>
 
-        <a class="logo" href="index.html">Bremster</a>
+        <a class="logo" href="index.php">Bremster</a>
 
         <nav class="menu-direito">
             <ul class="menu-direito-ul">
-                <li class="tem-menu">
-
-                    <button class="botao-menu"><a href="index.html">Explorar</a></button>
-                    <ul class="submenu">
+                 <li class="tem-menu">
+                     <button class="botao-menu"><a href="index.php">Explorar</a></button>
+                     <ul class="submenu">
                         <li>
-                            <button class="botao-transparente"><a href="index.html">Promoções</a></button>
+                            <button class="botao-transparente"><a href="index.php">Promoções</a></button>
                         </li>
-
                         <li>
-                            <button class="botao-transparente"><a href="index.html">Para você</a></button>
+                            <button class="botao-transparente"><a href="index.php">Para você</a></button>
                         </li>
-                    </ul>
+                     </ul>
                 </li>
 
-                <li class="tem-menu">
-                    <button class="botao-menu"><a href="login.html">Login</a></button>
-                    <ul class="submenu">
+
+                <?php if (isset($_SESSION['nome'])): ?>
+
+                    <li class="tem-menu">
+                     <button class="botao-menu"><a href="dashboard.php">Carrinho</a></button>
+                     <ul class="submenu">
                         <li>
-                            <button class="botao-transparente"><a href="login.html">Entrar</a></button>
+                            <button class="botao-transparente"><a href="dashboard.php">Minha sacola</a></button>
                         </li>
+                     </ul>
+                    </li>
 
-                        <li>
-                            <button class="botao-transparente"><a href="login.html">Cadastrar</a></button>
-                        </li>
-                    </ul>
-                </li>
+                    <li class="tem-menu">
+                        <button class="botao-menu botao-sair"><a href="logout.php">Sair</a></button>
+                    </li>
+                <?php else: ?>
+                    <li class="tem-menu">
+                         <button class="botao-menu"><a href="login.php">Login</a></button>
+                         <ul class="submenu">
+                            <li>
+                                <button class="botao-transparente"><a href="login.php">Entrar</a></button>
+                            </li>
+                            <li>
+                                <button class="botao-transparente"><a href="cadastro.php">Cadastrar</a></button>
+                            </li>
+                         </ul>
+                    </li>
+                <?php endif; ?>
 
-                <li class="tem-menu">
-                    <button class="botao-menu"><a href="dashboard.html">Carrinho</a> </button>
-                    <ul class="submenu">
-                        <li>
-                            <button class="botao-transparente"><a href="dashboard.html">Minha sacola</a></button>
-                        </li>
 
-
-                    </ul>
-                </li>
+                 
             </ul>
         </nav>
-
+            
     </header>
 
     <main class="conteudo-contato">
@@ -95,21 +101,21 @@
 
             <div class="espaco-avaliacao">
                 <div class="frase-contato">
-                <h2>Nos <strong>avalie</strong></h2>
-            </div>
+                    <h2>Nos <strong>avalie</strong></h2>
+                </div>
 
-            <div class="nota">
-                <button id="1"></button>
-                <button id="2"></button>
-                <button id="3"></button>
-                <button id="4"></button>
-                <button id="5"></button>
-            </div>
+                <div class="nota">
+                    <button id="1"></button>
+                    <button id="2"></button>
+                    <button id="3"></button>
+                    <button id="4"></button>
+                    <button id="5"></button>
+                </div>
 
-             <button id="avaliacao">Deixar avalição</button>
-             </div>
+                <button id="avaliacao">Deixar avalição</button>
             </div>
-            
+        </div>
+
 
         <section class="form-contato">
             <label>Email</label>
