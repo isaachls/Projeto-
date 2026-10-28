@@ -87,6 +87,25 @@ li{
     color:#331C13
 }
 
+
+button.botao-menu.botao-sair {
+    background-color: #5f1717 !important;
+    border: 1px solid #331C13 !important;
+}
+
+button.botao-menu.botao-sair a {
+    color: #EDE9DE !important;
+}
+
+button.botao-menu.botao-sair:hover {
+    background-color:  #EDE9DE !important;
+}
+
+button.botao-menu.botao-sair:hover a {
+    color: #5f1717 !important;
+}
+
+
 .submenu{
     position:absolute;
     white-space:nowrap;
@@ -1028,4 +1047,71 @@ li{
 
 .espaco-avaliacao{
     margin:0;
+}
+
+.conteudo-cadastro{
+    display:flex;
+    align-items:flex-start;
+    gap:180px;
+    justify-content:center;
+    margin-top:0;
+    flex: 1 0 auto; 
+}
+
+.form-cadastro{
+    margin-top:60px;
+    display:flex;
+    flex:2;
+    flex-direction:column;
+    gap:16px;
+    max-width: 290px;
+}
+
+.form-cadastro button{
+    margin-top:30px;
+    width:fit-content;
+    padding:8px;
+    margin: 30px auto 0;
+    background-color:#331C13;
+    color:#fff6d7;
+    border: 1px solid transparent;
+    border-radius:4px;
+    transition: all 0.2s ease;
+}
+
+.form-cadastro button:hover{
+    margin-top:30px;
+    width:fit-content;
+    padding:8px;
+    margin: 30px auto 0;
+    background-color:#fff6d7;
+    color:#331C13;
+    border: 1px solid #331c13;
+    border-radius:4px
+}
+
+.form-cadastro h1{
+    display: inline-block;
+    width:fit-content;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+.form-cadastro h1, label{
+    color:#331C13;
+}
+
+.form-cadastro label{
+    font-weight:500;
+}
+
+.form-cadastro input{
+    background-color:#EDE9DE;
+    border: 1px solid #331C13;
+    border-radius: 2px;
+    padding:8px;
+    font-style:italic;
+}
+
+.imagem-cadastro{
+    width:40%;
 }
