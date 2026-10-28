@@ -24,6 +24,6 @@ buttons.forEach(function(button){button.addEventListener("click", function() {
 
     localStorage.setItem("produtoEscolhido", JSON.stringify(produtoEscolhido));
     console.log(produtoEscolhido);
-    window.location.href = 'produto.html';
+    window.location.href = 'produto.php';
 });
 });
