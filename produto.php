@@ -1,3 +1,11 @@
+<?php
+session_start();
+$estaLogado = isset($_SESSION['nome']) ? 'true' : 'false';
+?>
+<script>
+    const usuarioLogado = <?php echo $estaLogado; ?>;
+</script>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -10,77 +18,80 @@
 
     <div class="topo"></div>
     <header class="cabecalho">
-         <nav class="menu-esquerdo">
+        <nav class="menu-esquerdo">
             <ul class="menu-esquerdo-ul">
                 <li class="tem-menu">
-                    <button class="botao-menu"><a href="contato.html">Contato</a></button>
-                     <ul class="submenu">
+                    <button class="botao-menu"><a href="contato.php">Contato</a></button>
+                    <ul class="submenu">
                         <li>
-                            <button class="botao-transparente"><a href="contato.html">Enviar recado</a></button>
+                            <button class="botao-transparente"><a href="contato.php">Enviar recado</a></button>
                         </li>
-                            
                         <li>
-                            <button class="botao-transparente"><a href="contato.html">Avaliar</a></button>
+                            <button class="botao-transparente"><a href="contato.php">Avaliar</a></button>
                         </li>
                      </ul>
                 </li>
                 <li class="tem-menu">
-                    <button class="botao-menu"><a href="sobre.html">Sobre nós</a></button>
-                     <ul class="submenu">
+                    <button class="botao-menu"><a href="sobre.php">Sobre nós</a></button>
+                    <ul class="submenu">
                         <li>
-                            <button class="botao-transparente"><a href="sobre.html">Quem somos?</a></button>
+                            <button class="botao-transparente"><a href="sobre.php">Quem somos?</a></button>
                         </li>
-                            
-
                      </ul>
                 </li>
             </ul>
         </nav>
 
-        <a class="logo" href="index.html">Bremster</a>
+        <a class="logo" href="index.php">Bremster</a>
 
         <nav class="menu-direito">
             <ul class="menu-direito-ul">
                  <li class="tem-menu">
-                     
-                     <button class="botao-menu"><a href="index.html">Explorar</a></button>
+                     <button class="botao-menu"><a href="index.php">Explorar</a></button>
                      <ul class="submenu">
                         <li>
-                            <button class="botao-transparente"><a href="index.html">Promoções</a></button>
+                            <button class="botao-transparente"><a href="index.php">Promoções</a></button>
                         </li>
-                            
                         <li>
-                            <button class="botao-transparente"><a href="index.html">Para você</a></button>
+                            <button class="botao-transparente"><a href="index.php">Para você</a></button>
                         </li>
                      </ul>
                 </li>
 
-                <li class="tem-menu">
-                      <button class="botao-menu"><a href="login.html">Login</a></button>
+
+                <?php if (isset($_SESSION['nome'])): ?>
+
+                    <li class="tem-menu">
+                     <button class="botao-menu"><a href="dashboard.php">Carrinho</a></button>
                      <ul class="submenu">
                         <li>
-                            <button class="botao-transparente"><a href="login.html">Entrar</a></button>
-                        </li>
-                            
-                        <li>
-                            <button class="botao-transparente"><a href="login.html">Cadastrar</a></button>
+                            <button class="botao-transparente"><a href="dashboard.php">Minha sacola</a></button>
                         </li>
                      </ul>
-                </li>
+                    </li>
 
-                 <li class="tem-menu">
-                 <button class="botao-menu"><a href="dashboard.html">Carrinho</a> </button>
-                     <ul class="submenu">
-                        <li>
-                            <button class="botao-transparente"><a href="dashboard.html">Minha sacola</a></button>
-                        </li>
-                            
+                    <li class="tem-menu">
+                        <button class="botao-menu botao-sair"><a href="logout.php">Sair</a></button>
+                    </li>
+                <?php else: ?>
+                    <li class="tem-menu">
+                         <button class="botao-menu"><a href="login.php">Login</a></button>
+                         <ul class="submenu">
+                            <li>
+                                <button class="botao-transparente"><a href="login.php">Entrar</a></button>
+                            </li>
+                            <li>
+                                <button class="botao-transparente"><a href="cadastro.php">Cadastrar</a></button>
+                            </li>
+                         </ul>
+                    </li>
+                <?php endif; ?>
 
-                     </ul>
-                </li>
+
+                 
             </ul>
         </nav>
-  
+            
     </header>
 
     <main class="conteudo-produto">
