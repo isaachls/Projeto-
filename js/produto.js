@@ -131,6 +131,12 @@ botoesTamanho.forEach(function(botao) {
 
     botaoProsseguir.addEventListener("click", function() {
 
+        if (!usuarioLogado) {
+            alert("Você precisa estar logado para adicionar itens ao carrinho!");
+            window.location.href = "login.php";
+            return;
+        }
+
         if (!tamanhoEscolhido) {
             alert("Por favor, selecione um tamanho antes de prosseguir!");
             return;
@@ -161,7 +167,7 @@ botoesTamanho.forEach(function(botao) {
         localStorage.setItem("carrinho", JSON.stringify(carrinho));
 
 
-        window.location.href = "dashboard.html";
+        window.location.href = "dashboard.php";
     });
     
     
