@@ -2,10 +2,15 @@
 # Requisitos funcionais (RF)
 
 **RF01** O sistema deve permitir que o cliente se cadastre com nome, data de nascimento, e mail e senha. - *ALTA PRIORIDADE*
+
 **RF02** O sistema deve permitir que o cliente adicione produtos ao carrinho. - *ALTA PRIORIDADE*
+
 **RF03** O sistema deve permitir que o cliente altere tamanho e cor dos produtos. - *ALTA PRIORIDADE*
+
 **RF04** O sistema deve permitir que o administrador altere o status do pedido. - *ALTA PRIORIDADE*
+
 **RF05** O sistema deve permitir que o cliente utilize cupons.  - *MÉDIA PRIORIDADE*
+
 **RF06** O sistema deve mostrar o histórico de pedidos do cliente.  - *MÉDIA PRIORIDADE*
 
 
