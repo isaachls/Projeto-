@@ -5,15 +5,10 @@ CREATE TABLE `CATEGORIA` (
 
 CREATE TABLE `CLIENTE` (
   `id_cliente` int(11) NOT NULL,
-  
   `nome` varchar(100) NOT NULL,
-  
   `email` varchar(100) NOT NULL,
-  
   `senha` varchar(50) NOT NULL,
-  
   `endereco` varchar(100) NOT NULL,
-  
   `data_nascimento` date NOT NULL DEFAULT '2000-01-01'
 );
 
