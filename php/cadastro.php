@@ -16,20 +16,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($idade < 18) {
         $mensagemErro = "Você precisa ter pelo menos 18 anos para se cadastrar!";
-    } else {
-      
-        $sqlBusca = "SELECT * FROM CLIENTE WHERE email = '$email'";
-        $resultadoBusca = mysqli_query($conexao, $sqlBusca);
-
-        if (mysqli_num_rows($resultadoBusca) > 0) {
+    } else { 
+        $sqlBusca = "SELECT * FROM usuario WHERE email = ?";
+        $stmt = $pdo->prepare($sqlBusca);
+        $stmt->bindValue(1, $email);
+        $stmt->execute();
+        $resultadoBusca = $stmt->fetch(PDO::FETCH_ASSOC);
+        if ($resultadoBusca) {
             $mensagemErro = "Este e-mail já está cadastrado!";
         } else {
-     
-            $sqlSalvar = "INSERT INTO CLIENTE (nome, nascimento, email, senha) VALUES ('$nome', '$nascimento', '$email', '$senha')";
-            $resultadoSalvar = mysqli_query($conexao, $sqlSalvar);
+            $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+            $sqlSalvar = "INSERT INTO usuario (nome, data_nascimento, email, senha_hash) VALUES (?, ?, ?, ?)";
+            $stmtSalvar = $pdo->prepare($sqlSalvar);
+            $stmtSalvar->bindValue(1, $nome);
+            $stmtSalvar->bindValue(2, $nascimento);
+            $stmtSalvar->bindValue(3, $email);
+            $stmtSalvar->bindValue(4, $senhaHash);
+            $resultadoSalvar = $stmtSalvar->execute();
 
             if ($resultadoSalvar) {
-                $_SESSION['nome'] = $nome;
                 header("Location: login.php");
                 exit();
             } else {
@@ -46,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -154,7 +159,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </form>
 
         <div class="imagem-login">
-            <img class="moda" src="img/Moda.png" alt="Mulher e Moda">
+            <img class="moda" src="../img/Moda.png" alt="Mulher e Moda">
         </div>
 
     </main>
@@ -198,7 +203,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     </footer>
 
-    <script src="js/cadastro.js"></script>
+    <script src="../js/cadastro.js"></script>
 
 </body>
 
