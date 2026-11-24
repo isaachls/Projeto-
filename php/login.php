@@ -8,16 +8,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $senha = $_POST['senha'];
 
-    $sql = "SELECT * FROM CLIENTE WHERE email = '$email'";
-    $resultado = mysqli_query($conexao, $sql);
-    $usuario = mysqli_fetch_assoc($resultado);
+    $sql = "SELECT * FROM usuario WHERE email = ?";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindValue(1, $email);
+    $stmt->execute();
+    $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if ($usuario && $senha == $usuario['senha']) {
+    if ($usuario && password_verify($senha, $usuario['senha_hash'])) {
 
+        $_SESSION['id_usuario'] = $usuario['id_usuario'];
         $_SESSION['nome'] = $usuario['nome'];
+        $_SESSION['tipo_usuario'] = $usuario['tipo_usuario'];
 
-        header("Location: index.php");
-        exit();
+
+        if ($usuario['tipo_usuario'] === 'admin') {
+            header("Location: admin/index_adm.php");
+        } else {
+            header("Location: index.php");
+        }
+
+
+exit();
+
+
     } else {
         $mensagemErro = "E-mail ou senha incorretos!";
     }
@@ -29,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Bremster</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
@@ -123,7 +136,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </form> 
 
         <div class="imagem-login">
-            <img class="moda" src="img/Moda.png" alt="Mulher e Moda">
+            <img class="moda" src="../img/Moda.png" alt="Mulher e Moda">
         </div>
     </main>
 
