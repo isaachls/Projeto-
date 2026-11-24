@@ -124,14 +124,8 @@ $cores = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <nav class="sidebar">
         <div class="logo">Br</div>
         <div class="botoes">
-            <button class="adm-botao" id="geral"><img src="">Visão geral</button>
-            <button class="adm-botao" id="produtos" onclick="window.location.href='produto_adm.php'"><img src="">Produtos</button>
-            <button class="adm-botao" id="categorias"><img src="">Categorias</button>
-            <button class="adm-botao" id="cores_tam"><img src="">Cores e tamanhos</button>
-            <button class="adm-botao" id="pedidos"><img src="">Pedidos</button>
-            <button class="adm-botao" id="cupons"><img src="">Cupons</button>
-            <button class="adm-botao" id="usuarios"><img src="">Usuários</button>
-            <button class="adm-botao" id="relatorios"><img src=""> Relatórios</button>
+            <button class="adm-botao" id="geral" onclick="window.location.href='index_adm.php'">Visão geral</button>
+            <button class="adm-botao" id="produtos" onclick="window.location.href='produto_adm.php'">Produtos</button>
         </div>
 
         <div class="conf-sair">
@@ -159,13 +153,17 @@ $cores = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <form method="POST" enctype="multipart/form-data" class="form-cadastro-produto">
 
             <h3>Informações do produto</h3>
-
+            
+            <div class="info-prod">
+            <div class="lado">
             <label for="nome_produto">Nome do produto</label>
             <input type="text" id="nome_produto" name="nome_produto" required>
 
             <label for="marca">Marca</label>
             <input type="text" id="marca" name="marca" required>
+            </div>
 
+            <div class="lado">
             <label for="descricao">Descrição</label>
             <textarea id="descricao" name="descricao" required></textarea>
 
@@ -180,16 +178,16 @@ $cores = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <?php endforeach; ?>
 
             </select>
-
+             </div>
+            </div>
             
             <hr>
 
             <h3>Imagens por cor</h3>
 
             <div id="lista-imagens">
-
-                <div class="imagem-cor">
-
+                <div class="imagem-cor info-prod">
+                    <div class="lado">
                     <label>Cor</label>
                     <select name="imagem_id_cor[]" required>
                         <option value="">Selecione uma cor</option>
@@ -199,9 +197,8 @@ $cores = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 <?= htmlspecialchars($cor['nome']) ?>
                             </option>
                         <?php endforeach; ?>
-
-                    </select>
-
+                    </select></div>
+                    <div class="lado">
                     <label>Imagem</label>
                     <input type="file" name="imagem_cor[]" accept="image/*" required>
                     
@@ -209,6 +206,7 @@ $cores = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         Remover imagem
                     </button>
                 </div>
+            </div>
 
             </div>
 
@@ -221,43 +219,45 @@ $cores = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <h3>Variações do produto</h3>
 
             <div id="lista-variacoes">
+                
+                    <div class="variacao">
+                        <div class="info-prod">
+                            <div class="lado">
+                                <label>Tamanho</label>
+                                <input type="text" name="tamanho[]" required>
 
-                <div class="variacao">
+                                <label>Cor</label>
+                                <select name="id_cor[]" required>
+                                    <option value="">Selecione uma cor</option>
 
-                    <label>Tamanho</label>
-                    <input type="text" name="tamanho[]" required>
+                                    <?php foreach ($cores as $cor): ?>
+                                        <option value="<?= $cor['id_cor'] ?>">
+                                            <?= htmlspecialchars($cor['nome']) ?>
+                                        </option>
+                                    <?php endforeach; ?>
 
-                    <label>Cor</label>
-                    <select name="id_cor[]" required>
-                        <option value="">Selecione uma cor</option>
+                                </select>
+                            </div>
+                            <div class="lado">
+                            <label>Preço</label>
+                            <input type="number" name="preco[]" step="0.01" min="0" required>
 
-                        <?php foreach ($cores as $cor): ?>
-                            <option value="<?= $cor['id_cor'] ?>">
-                                <?= htmlspecialchars($cor['nome']) ?>
-                            </option>
-                        <?php endforeach; ?>
+                            <label>Estoque</label>
+                            <input type="number" name="estoque[]" min="0" required>
 
-                    </select>
+                            <button type="button" class="remover-variacao">
+                                Remover variação
+                            </button></div>
 
-                    <label>Preço</label>
-                    <input type="number" name="preco[]" step="0.01" min="0" required>
-
-                    <label>Estoque</label>
-                    <input type="number" name="estoque[]" min="0" required>
-
-                    <button type="button" class="remover-variacao">
-                        Remover variação
-                    </button>
-
+                     </div>
                 </div>
-
             </div>
 
             <button type="button" id="adicionar-variacao">
                 + Adicionar variação
             </button>
 
-            <button type="submit">
+            <button type="submit" class="cad-prod">
                 Cadastrar produto
             </button>
 
