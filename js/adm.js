@@ -68,3 +68,5 @@ if (listaImagens && botaoAdicionarImagem) {
         }
     });
 }
+
+event.target.closest('.imagem-cor').remove();
