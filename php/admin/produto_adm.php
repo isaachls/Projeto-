@@ -53,7 +53,7 @@ $categorias = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <nav class="sidebar">
           <div class="logo">Br</div>
           <div class="botoes">
-              <button class="adm-botao" id="geral"><img src="">Visão geral</button>
+              <button class="adm-botao" id="geral" onclick="window.location.href='index_adm.php'"><img src="">Visão geral</button>
               <button class="adm-botao" id="produtos"><img src="">Produtos</button>
               <button class="adm-botao" id="categorias"><img src="">Categorias</button>
               <button class="adm-botao" id="cores_tam"><img src="">Cores e tamanhos</button>
@@ -85,16 +85,22 @@ $categorias = $stmt->fetchAll(PDO::FETCH_ASSOC);
           </div>
 
           
-      <form method="GET" action="" class="form-busca">
-          <input
-              type="search"
-              id="busca"
-              name="busca"
-              placeholder="Buscar por nome..."
-              class="input-busca"
-              value="<?= htmlspecialchars($busca) ?>"
-          >
-      </form>
+      <div class="barra-acoes">
+        <form method="GET" action="" class="form-busca">
+            <input
+                type="search"
+                id="busca"
+                name="busca"
+                placeholder="Buscar por nome..."
+                class="input-busca"
+                value="<?= htmlspecialchars($busca) ?>"
+            >
+        </form>
+
+        <a href="cadastro_produto.php" class="btn-novo">
+            + Novo cadastro
+        </a>
+    </div>
 
         <div class="tabela-container">
           <table class="tabela-produtos">

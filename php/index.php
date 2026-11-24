@@ -1,6 +1,36 @@
 <?php
 session_start();
+require_once('conexao.php');
+
+    $sql = "SELECT
+    p.id_produto,
+    p.nome_produto,
+    p.marca,
+    (
+        SELECT v.preco
+        FROM variacao v
+        WHERE v.id_produto = p.id_produto
+        ORDER BY v.id_variacao
+        LIMIT 1
+    ) AS preco,
+    (
+        SELECT img.caminho_imagem
+        FROM variacao v
+        INNER JOIN imagem img
+            ON img.id_produto = v.id_produto
+            AND img.id_cor = v.id_cor
+        WHERE v.id_produto = p.id_produto
+        ORDER BY v.id_variacao
+        LIMIT 1
+    ) AS imagem
+    FROM produto p
+    ORDER BY p.id_produto DESC";
+
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+    $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -111,75 +141,41 @@ session_start();
 
         <div class="lista-produtos">
 
+        <?php foreach ($produtos as $produto): ?>
+
             <div class="produto">
+
                 <a href="produto.php">
                     <div class="balao-roupa">
-                        <img src="../img/Jaqueta-rosa.png">
+                        <img 
+                            src="../<?= htmlspecialchars($produto['imagem']) ?>" 
+                            alt="<?= htmlspecialchars($produto['nome_produto']) ?>"
+                        >
                     </div>
                 </a>
+
                 <div class="info-roupa">
-                    <p class="nomeProduto">Jaqueta Y2Bros</p>
-                    <p class="precoProduto">R$99,90</p>
+                    <p class="nomeProduto">
+                        <?= htmlspecialchars($produto['nome_produto']) ?>
+                    </p>
+
+                    <p class="precoProduto">
+                        R$<?= number_format($produto['preco'], 2, ',', '.') ?>
+                    </p>
                 </div>
-                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
+
+                <button 
+                    class="adicionar-carrinho"
+                    data-id="<?= $produto['id_produto'] ?>"
+                >
+                    Adicionar ao carrinho
+                </button>
+
             </div>
 
-            <div class="produto">
-                <div class="balao-roupa">
-                    <img src="../img/azul.png">
-                </div>
-                <div class="info-roupa">
-                    <p class="nomeProduto">Jaqueta Justyle</p>
-                    <p class="precoProduto">R$89,90</p>        
-                </div>
-                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
-            </div>
+    <?php endforeach; ?>
 
-            <div class="produto">
-                <div class="balao-roupa">
-                    <img src="../img/vermelha.png">
-                </div>
-                <div class="info-roupa">
-                    <p class="nomeProduto">Camiseta social estilizada</p>
-                    <p class="precoProduto">R$119,90</p>
-                </div>
-                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
-            </div>
-
-            <div class="produto">
-                <div class="balao-roupa">
-                    <img src="../img/calca.png">
-                </div>
-                <div class="info-roupa">
-                    <p class="nomeProduto">Calça moletom Forever Young</p>
-                    <p class="precoProduto">R$49,90</p>
-                </div>
-                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
-            </div>
-
-            <div class="produto">
-                <div class="balao-roupa">
-                    <img src="../img/blusa-marrom.png">
-                </div>
-                <div class="info-roupa">
-                    <p class="nomeProduto">Camisa Oversized Moto</p>
-                    <p class="precoProduto">R$80,50</p>
-                </div>
-                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
-            </div>
-
-            <div class="produto">
-                <div class="balao-roupa">
-                    <img src="../img/caveira.png">
-                </div>
-                <div class="info-roupa">
-                    <p class="nomeProduto">Camisa Oversized Caveira</p>
-                    <p class="precoProduto">R$99,90</p>
-                </div>
-                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
-            </div>
-
-        </div>
+</div>
 
     </main>
 

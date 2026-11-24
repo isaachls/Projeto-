@@ -1,29 +1,32 @@
-
 const buttons = document.querySelectorAll(".adicionar-carrinho");
-const produtoEscolhido = JSON.parse(localStorage.getItem("produtoEscolhido")) || [];
 
-buttons.forEach(function(button){button.addEventListener("click", function() {
+buttons.forEach(function(button) {
 
-    const produto = button.closest(".produto");
-    const nome = produto.querySelector(".nomeProduto").textContent;
-    const precoTexto = produto.querySelector(".precoProduto").textContent;
-    const imagem = produto.querySelector(".balao-roupa img").src;
-    const preco = parseFloat(precoTexto.replace("R$", "").replace(",", ".").trim());
-    const produtoEscolhido = {
-            nome: nome,
-            preco: preco,
-            imagem: imagem,
-            imagensCores: [],
-        };
-        if (nome === "Jaqueta Y2Bros") {
-            produtoEscolhido.imagensCores = [
-                imagem, 
-                "img/jaqueta.marrom.png" 
-            ];
+    button.addEventListener("click", async function() {
+
+        const idProduto = button.dataset.id;
+
+        try {
+
+            const resposta = await fetch(`buscar_produto.php?id=${idProduto}`);
+            const produto = await resposta.json();
+
+            if (produto.erro) {
+                alert(produto.erro);
+                return;
+            }
+
+            localStorage.setItem("produtoEscolhido", JSON.stringify(produto));
+
+            window.location.href = "produto.php";
+
+        } catch (erro) {
+
+            console.error("Erro ao buscar produto:", erro);
+            alert("Não foi possível carregar o produto.");
+
         }
 
-    localStorage.setItem("produtoEscolhido", JSON.stringify(produtoEscolhido));
-    console.log(produtoEscolhido);
-    window.location.href = 'produto.php';
-});
+    });
+
 });

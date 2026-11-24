@@ -28,7 +28,7 @@ function mostrarCarrinho () {
 
     divItem.innerHTML = `
             <div class="balao-roupa-carrinho">
-                <img src="${produto.corSelecionada || produto.imagem}" alt="${produto.nome}">
+                <img src="${produto.imagem}" alt="${produto.nome}">
             </div>
             <div class="infos-pedido">
                 <h2 class="nome-info">${produto.nome}</h2>

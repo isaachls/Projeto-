@@ -1,23 +1,38 @@
+
 const ultimoProduto = JSON.parse(localStorage.getItem("produtoEscolhido"));
 const imagemProduto = document.querySelector("#imagem-produto");
 const infoProduto = document.querySelector("#info-roupa");
 
-let tamanhoEscolhido = "";
-let corEscolhida = "";
+let corEscolhida = null;
+let variacaoEscolhida = null;
 
+const cores = [];
 
+ultimoProduto.variacoes.forEach(function(variacao) {
 
-function mostrarImagem () {
+    const existe = cores.some(function(cor) {
+        return cor.id_cor == variacao.id_cor;
+    });
 
-    const divItem = document.createElement("div");
-    divItem.classList.add("imagem-produto");
+    if (!existe && variacao.id_cor !== null) {
+        cores.push({
+            id_cor: variacao.id_cor,
+            nome: variacao.cor,
+            imagem: variacao.imagem
+        });
+    }
 
-    divItem.innerHTML = `
-      <div class="balao-roupa-carrinho">
-          <img src="${ultimoProduto.imagem}" alt="${ultimoProduto.nome}">
-      </div>
+});
+
+function mostrarImagem() {
+
+    imagemProduto.innerHTML = `
+        <div class="imagem-produto">
+            <div class="balao-roupa-carrinho">
+                <img src="../${cores[0].imagem}" alt="${ultimoProduto.nome}">
+            </div>
+        </div>
     `;
-    imagemProduto.appendChild(divItem);
 
 }
 
@@ -28,103 +43,117 @@ function mostrarInfos() {
 
     let htmlCores = "";
 
-    if (ultimoProduto.imagensCores && ultimoProduto.imagensCores.length > 0) {
-        for (let i = 0; i < ultimoProduto.imagensCores.length; i++) {
-            let fotoCor = ultimoProduto.imagensCores[i];
-            htmlCores += `
-                <div class="balao-roupa cor-opcao" data-imagem="${fotoCor}">
-                    <img src="${fotoCor}">
-                </div>
-            `;
-        }
-    } else {
-        htmlCores = `
-            <div class="balao-roupa cor-opcao" data-imagem="${ultimoProduto.imagem}">
-                <img src="${ultimoProduto.imagem}">
+    cores.forEach(function(cor) {
+
+        htmlCores += `
+            <div class="balao-roupa cor-opcao" data-cor="${cor.id_cor}">
+                <img src="../${cor.imagem}" alt="${cor.nome}">
             </div>
         `;
-    }
+
+    });
 
     divItem.innerHTML = `
-        
-    <div class="infos-marca">
-                <div class="marca">
-                  <img src="img/Y.png"> 
-                  <p>Y2Bros</p>
-                </div>
-                <p>Código</p>
+        <div class="infos-marca">
+            <div class="marca">
+                <p>${ultimoProduto.marca}</p>
             </div>
+            <p>Código: ${ultimoProduto.id_produto}</p>
+        </div>
 
-            <div class="nome-preco">
-                <h2>${ultimoProduto.nome}</h2>
-                <h2>R$${ultimoProduto.preco.toFixed(2).replace(".", ",")}</h2>
-            </div>
-            
-            <div class="cor">
+        <div class="nome-preco">
+            <h2>${ultimoProduto.nome}</h2>
+            <h2 id="preco-produto"></h2>
+        </div>
+
+        <div class="cor">
             <p>Cor</p>
-            
             <div class="foto-cores">
                 ${htmlCores}
             </div>
         </div>
-                <p>Tamanho</p>
-            <div class="TAM">
-                
 
-                <div class="balao-roupa">
-                      <button>P</button>
-                </div>
+        <p>Tamanho</p>
+        <div class="TAM" id="lista-tamanhos"></div>
 
-                <div class="balao-roupa">
-                      <button>M</button>
-                </div>
+        <p class="guia">Guia de tamanhos</p>
 
-                <div class="balao-roupa">
-                      <button>G</button>
-                </div>
+        <div class="add-carrinho">
+            <button class="botao-produto" id="botao-prosseguir">
+                Prosseguir
+            </button>
+        </div>
+    `;
 
-                
-            </div>
-            <p class="guia">Guia de tamanhos</p>
-                <div class="add-carrinho">
-                    <button class="botao-produto" id="botao-prosseguir">Prosseguir</button>
-                </div>
-
-    `
-
+    infoProduto.innerHTML = "";
     infoProduto.appendChild(divItem);
 
-    const botoesTamanho = divItem.querySelectorAll(".TAM .balao-roupa");
-
-botoesTamanho.forEach(function(botao) {
-    botao.addEventListener("click", function() {
-
-        botoesTamanho.forEach(b => b.classList.remove("selecionado"));
-        
-        botao.classList.add("selecionado");
-
-
-        tamanhoEscolhido = botao.textContent.trim();
-
-    });
-});
-
     const opcoesCor = divItem.querySelectorAll(".cor-opcao");
+    const listaTamanhos = divItem.querySelector("#lista-tamanhos");
+    const precoProduto = divItem.querySelector("#preco-produto");
 
     opcoesCor.forEach(function(balao) {
+
         balao.addEventListener("click", function() {
-            opcoesCor.forEach(b => b.classList.remove("selecionado"));
-            
+
+            opcoesCor.forEach(function(opcao) {
+                opcao.classList.remove("selecionado");
+            });
+
             balao.classList.add("selecionado");
 
-            corEscolhida = balao.getAttribute("data-imagem");
+            corEscolhida = balao.dataset.cor;
+            variacaoEscolhida = null;
 
-            const imgPrincipal = document.querySelector(".imagem-produto img");
-            if (imgPrincipal) {
-                imgPrincipal.src = corEscolhida;
-            }
+            const corAtual = cores.find(function(cor) {
+                return cor.id_cor == corEscolhida;
+            });
+
+            imagemProduto.querySelector("img").src = "../" + corAtual.imagem;
+
+            listaTamanhos.innerHTML = "";
+
+            const variacoesCor = ultimoProduto.variacoes.filter(
+                function(variacao) {
+                    return variacao.id_cor == corEscolhida;
+                }
+            );
+
+            variacoesCor.forEach(function(variacao) {
+
+                const botao = document.createElement("div");
+                botao.classList.add("balao-roupa");
+
+                botao.innerHTML = `<button>${variacao.tamanho}</button>`;
+
+                if (variacao.estoque <= 0) {
+                    botao.classList.add("indisponivel");
+                    botao.querySelector("button").disabled = true;
+                }
+
+                botao.addEventListener("click", function() {
+
+                    listaTamanhos.querySelectorAll(".balao-roupa")
+                        .forEach(function(item) {
+                            item.classList.remove("selecionado");
+                        });
+
+                    botao.classList.add("selecionado");
+
+                    variacaoEscolhida = variacao;
+
+                    precoProduto.textContent =
+                        "R$" + Number(variacao.preco)
+                        .toFixed(2).replace(".", ",");
+
+                });
+
+                listaTamanhos.appendChild(botao);
+
+            });
 
         });
+
     });
 
     const botaoProsseguir = divItem.querySelector("#botao-prosseguir");
@@ -137,40 +166,64 @@ botoesTamanho.forEach(function(botao) {
             return;
         }
 
-        if (!tamanhoEscolhido) {
-            alert("Por favor, selecione um tamanho antes de prosseguir!");
-            return;
-        }
         if (!corEscolhida) {
-            alert("Por favor, selecione uma cor antes de prosseguir!");
+            alert("Selecione uma cor!");
             return;
         }
 
-        ultimoProduto.tamanhoSelecionado = tamanhoEscolhido;
-        ultimoProduto.corSelecionada = corEscolhida;
-        ultimoProduto.quantidade = 1;
+        if (!variacaoEscolhida) {
+            alert("Selecione um tamanho!");
+            return;
+        }
+
+        if (variacaoEscolhida.estoque <= 0) {
+            alert("Essa variação está sem estoque!");
+            return;
+        }
+
+        const corAtual = cores.find(function(cor) {
+            return cor.id_cor == corEscolhida;
+        });
+
+        const produtoCarrinho = {
+            id_produto: ultimoProduto.id_produto,
+            id_variacao: variacaoEscolhida.id_variacao,
+            nome: ultimoProduto.nome,
+            marca: ultimoProduto.marca,
+            preco: Number(variacaoEscolhida.preco),
+            imagem: "../" + corAtual.imagem,
+            tamanhoSelecionado: variacaoEscolhida.tamanho,
+            corSelecionada: corAtual.nome,
+            id_cor_selecionada: corAtual.id_cor,
+            quantidade: 1
+        };
 
         let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
-        let itemExistente = carrinho.find(function(produto) {
-            return produto.nome === ultimoProduto.nome &&
-                   produto.tamanhoSelecionado === ultimoProduto.tamanhoSelecionado &&
-                   produto.corSelecionada === ultimoProduto.corSelecionada;
+        const itemExistente = carrinho.find(function(produto) {
+            return produto.id_variacao === produtoCarrinho.id_variacao;
         });
 
         if (itemExistente) {
+
+            if (itemExistente.quantidade >= variacaoEscolhida.estoque) {
+                alert("Você atingiu o limite de estoque dessa variação!");
+                return;
+            }
+
             itemExistente.quantidade += 1;
+
         } else {
-            carrinho.push(ultimoProduto);
+            carrinho.push(produtoCarrinho);
         }
 
         localStorage.setItem("carrinho", JSON.stringify(carrinho));
 
-
         window.location.href = "dashboard.php";
+
     });
-    
-    
+
 }
+
 mostrarImagem();
 mostrarInfos();
