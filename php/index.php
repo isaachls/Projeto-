@@ -7,7 +7,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explorar - Bremster</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
@@ -114,7 +114,7 @@ session_start();
             <div class="produto">
                 <a href="produto.php">
                     <div class="balao-roupa">
-                        <img src="img/Jaqueta-rosa.png">
+                        <img src="../img/Jaqueta-rosa.png">
                     </div>
                 </a>
                 <div class="info-roupa">
@@ -126,7 +126,7 @@ session_start();
 
             <div class="produto">
                 <div class="balao-roupa">
-                    <img src="img/azul.png">
+                    <img src="../img/azul.png">
                 </div>
                 <div class="info-roupa">
                     <p class="nomeProduto">Jaqueta Justyle</p>
@@ -137,7 +137,7 @@ session_start();
 
             <div class="produto">
                 <div class="balao-roupa">
-                    <img src="img/vermelha.png">
+                    <img src="../img/vermelha.png">
                 </div>
                 <div class="info-roupa">
                     <p class="nomeProduto">Camiseta social estilizada</p>
@@ -148,7 +148,7 @@ session_start();
 
             <div class="produto">
                 <div class="balao-roupa">
-                    <img src="img/calca.png">
+                    <img src="../img/calca.png">
                 </div>
                 <div class="info-roupa">
                     <p class="nomeProduto">Calça moletom Forever Young</p>
@@ -159,7 +159,7 @@ session_start();
 
             <div class="produto">
                 <div class="balao-roupa">
-                    <img src="img/blusa-marrom.png">
+                    <img src="../img/blusa-marrom.png">
                 </div>
                 <div class="info-roupa">
                     <p class="nomeProduto">Camisa Oversized Moto</p>
@@ -170,7 +170,7 @@ session_start();
 
             <div class="produto">
                 <div class="balao-roupa">
-                    <img src="img/caveira.png">
+                    <img src="../img/caveira.png">
                 </div>
                 <div class="info-roupa">
                     <p class="nomeProduto">Camisa Oversized Caveira</p>
@@ -214,6 +214,6 @@ session_start();
         </div>
     </footer>
 
-    <script src="js/index.js"></script>
+    <script src="../js/index.js"></script>
 </body>    
 </html>
