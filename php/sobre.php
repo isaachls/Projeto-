@@ -7,7 +7,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
@@ -113,7 +113,7 @@ session_start();
                     <p>Moda, para nós, também é sobre <strong>descobrir, reinventar e 
                     dar novos caminhos</strong> às peças.</p>
                 </div>
-                <img src="img/Sorriso.png" alt="Adesivo de sorriso">
+                <img src="../img/Sorriso.png" alt="Adesivo de sorriso">
             </div>
             <a href="dashboard.php">Explore a remster e encontre o que combina com você.</a>
         
