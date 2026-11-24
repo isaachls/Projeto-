@@ -20,7 +20,12 @@ Sistema web de pedidos num brechó. O cliente vê peças e faz o pedido pelo cel
 Passos detalhados em `docs/instalacao.md`.
 
 ## Usuário de teste 
+*Cliente*
 - E-mail: carlinhos@gmail.com
+- Senha: 123
+
+*Admnistrador*
+- E-mail: admin@gmail.com
 - Senha: 123
   
 ## Documentação 
