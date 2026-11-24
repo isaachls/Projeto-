@@ -15,8 +15,8 @@ Sistema web de pedidos num brechó. O cliente vê peças e faz o pedido pelo cel
 ## Como rodar 
 1. Instale o XAMPP e ligue Apache e MySQL. 
 2. Copie a pasta `Projeto-` para `C:\xampp\htdocs`. 
-3. No phpMyAdmin, importe `database/banco_bremster_.sql`. 
-4. Acesse http://localhost/Projeto-
+3. No phpMyAdmin, importe `database/banco_bremster.sql`. 
+4. Acesse http://localhost/Projeto--main
 Passos detalhados em `docs/instalacao.md`.
 
 ## Usuário de teste 
