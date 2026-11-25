@@ -33,17 +33,16 @@
 
 # Histórias de usuário 
 
-**H1** Como cliente, quero ver o status do meu pedido, para saber quando devo ir retirar.
+**H1** Como administrador, quero adicionar novos produtos, para atualizar meu catálogo.
 
-    • O status aparece na tela "Meus pedidos". 
-    • Os status possíveis são: Recebido, Em preparo, Pronto e Entregue. 
-    • A tela atualiza sem precisar sair e entrar de novo. 
+    • Os produtos podem ser atualizados na tela "Cadastro de Produtos". 
+    • O produto pode possuir uma ou mais variações, assim como imagens ou cor. 
+    • O catálogo atualiza assim que o produto é cadastrado. 
     
 **H2** Como cliente, quero ver quais produtos estão disponíveis em catálogo, para selecionar qual devo comprar.
 
     • Os produtos ficam exibidos na tela "Explorar" 
     • Os produtos possuem nome, foto e preço para melhor seleção. 
-    • A tela oferece filtros de seleção (menor preço, A-Z...). 
     
 **H3** Como cliente, quero poder enviar mensagens para o vendedor, para retirar dúvidas ou realizar queixas.
 
