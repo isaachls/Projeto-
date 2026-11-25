@@ -4,7 +4,7 @@
    **Atenção: você precisa ter pelo menos 18 anos para realizar o cadastro**
 3. Em seguida, faça login na pagina a qual foi direcionado.
 4. Pronto! Confira os produtos da lokja na tela **Explorar**
-![Tela do cadastro](telas/cadastro.png)
+![Tela do cadastro](telas/tela_cadastro.png)
 
 ## Como fazer um pedido
 Você pode fazer pedidos de segunda a sexta, das 8h às 18h.
@@ -13,10 +13,10 @@ Você pode fazer pedidos de segunda a sexta, das 8h às 18h.
 3. Toque no "Meu carrinho", no canto de cima da tela.
 4. Confira os itens e o valor total.
 5. Toque em **Prosseguir**.
-![Tela do carrinho](telas/carrinho.png)
+![Tela do carrinho](telas/tela_carrinho.png)
 
 ## Como adicionar um cupom
 1. Na página "Meu carrinho", encontre o campo de cupom.
 2. Adicione o cupom padrão da loja (primeiracompra).
 3. Aperte em prosseguir e pronto!
-![Tela do cupom](telas/cupom.png)
+![Tela do cupom](telas/tela_cupom.png)
