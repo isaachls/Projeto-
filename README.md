@@ -31,7 +31,6 @@ Passos detalhados em `docs/instalacao.md`.
 ## Documentação 
 - Requisitos: `docs/requisitos.md` 
 - Banco de dados: `docs/banco-de-dados.md` 
-- Manual do usuário: `docs/manual-usuario.md`
 
 ## Equipe 
 - Isaac Chelsea (Full stack)
