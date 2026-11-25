@@ -18,7 +18,7 @@
 | Variável | Valor padrão no XAMPP | 
 |----------|-----------------------| 
 | $host | localhost | 
-| $banco | cantinaweb | 
+| $banco | banco_bremster | 
 | $usuario | root | 
 | $senha | (vazio) | 
 
