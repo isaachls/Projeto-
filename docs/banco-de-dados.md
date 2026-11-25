@@ -9,6 +9,8 @@
 | `tipo` | `VARCHAR(20)` | Sim | — | Tipo de acesso ao site. Padrão: Cliente |
 | `data_nascimento` | `DATE` | Sim | — | Data de nascimento do usuário |
 
+--
+
 ### Tabela: `categoria`
 
 | Coluna | Tipo | Obrigatório | Chave | Descrição |
