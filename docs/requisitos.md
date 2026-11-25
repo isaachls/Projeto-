@@ -7,7 +7,7 @@
 
 **RF03** O sistema deve permitir que o cliente altere tamanho e cor dos produtos. - *ALTA PRIORIDADE*
 
-**RF04** O sistema deve permitir que o administrador altere o status do pedido. - *ALTA PRIORIDADE*
+**RF04** O sistema deve permitir que o administrador adicione produtos. - *ALTA PRIORIDADE*
 
 **RF05** O sistema deve permitir que o cliente utilize cupons.  - *MÉDIA PRIORIDADE*
 
